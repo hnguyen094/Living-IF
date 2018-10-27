@@ -1,0 +1,31 @@
+﻿You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. [line break] You open your eyes and turn towards your room, wanting to look around.
+[looking around]
+You wanted this room earlier. It reminds you of the emptiness of life. Well, and your impending death.[line break]You just want to wait here. 
+ [z]
+[italic type]Breathe,[roman type] you tell yourself. In the silence, the clock ticks.
+
+[enables clock] [doesn’t go as fast if we don’t look at it.]
+[x clock]
+Your mother taught you how to read an analog clock; how 20th century she was. Do you remember how to read an analog clock?
+[if player consents, mother is only disappointing]
+She was a good teacher, despite not being a good mother. 
+[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
+[line break]You miss her.
+The clock reads [the time of day in words].
+[otherwise, mother is maddening]
+The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that.
+[line break][italic type]Breathe.[roman type][line break]
+Her birth date is July 29th, 2003. 
+[line break][italic type]Breathe.[roman type][line break]
+She’s a Leo. Your grandfather was also a Leo. You miss him.
+[line break][italic type]Breathe.[roman type][line break]
+The clock reads [the time of day]. 
+
+You have [Time of death – the time of day] left.
+
+[X clock]
+It’s been x minutes since you last checked. You have [time of death – the time of day] left.
+---------- coded the above --------------
+
+You can see the off-brand Lego pieces that you used to play with, lying on the carpeted floor next to your grandpa’s gnarly feet. 
+[as you wait]

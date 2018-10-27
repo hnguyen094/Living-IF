@@ -1,0 +1,8 @@
+"Test" by "Hung".
+Release along with a website.Release along with an interpreter. Release along with the source text.
+
+dormroom is a room. The description of the bedroom is "Your dormroom is brightly lit; ontop of your desk, you can see bits and pieces of snacks spilling from a Lays bag, now on the ground."
+
+the desk is a thing in the dormroom.
+
+the Lays bag is a thing in the dormroom.
