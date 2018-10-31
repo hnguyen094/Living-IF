@@ -40,7 +40,7 @@ You can remember the exact layout of your desk, years ago. You turn around and s
 [look]
 There’s a desk in the room (among all the previous things)
 
-(on the desk, there’s a laptop at the webpage to subscribe, as well as an opened, unsealed letter from your wife.)
+(on the desk, there’s a laptop at the webpage to subscribe, as well as a letter from your wife. There’s also a shredder and an envelope.)
 
 [x letter]
 Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read. 
@@ -66,11 +66,11 @@ For yourself, for me, for our child.\”
 Kate In-young Dessalegn\” 
 [italic type]  Breathe.[roman type] 
 [italic type]  Breathe.[roman type] 
-You hold the letter in your hand, and can remember what you did next.
+You hold the letter in your hand and can remember what you did next.
 1) signed up on the computer (a neutral choice)
-2) throw away the letter (hate wife, hate life)
+2) shred the letter or envelope(hate wife, hate life)
 3) put it back in its envelope (cherish & love life)
- 
+
 
 
 

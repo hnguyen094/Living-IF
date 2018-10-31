@@ -14,6 +14,19 @@ Life dissatisfaction is a number that varies. Life dissatisfaction is 0. [From G
 Use analog is a truth state that varies. Use analog is true. [TODO: could also use love mom]
 Time changed by clock is a truth state that varies. Time changed by clock is false.
 Seen clock is a truth state that varies. Seen clock is false.
+Clock counter is a number that varies. Clock counter is 0.
+
+Table of Letter
+Line (indexed text)	EOF (truth state)
+"'Babe, I love you.
+[line break]The words ‘I[’]m sorry’ was scribbled out, but you can still see it underneath the ink marks. ‘Thank you. For everything. For all the loving moments.’"	False
+"‘I[’]m sorry that I must leave you early. I’m sorry I must leave our child motherless early. [if use analog is true]But I know he will grow up to be amazing regardless; you certainly did.'[otherwise]'I can only hope I was a better mother to him, than yours was to you.'"	False
+"'Still, Be his friend and his dad. Take him to the baseball games or buy him makeup; whatever he’s into.'"	False
+"'Love him. Love him again. Love him twice, so he can feel my love, too.’[line break]The text becomes a blur, but you blink a few times. More blotches appear on the letter."	False
+"‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need.
+[line break]Then move on.' It hurts just reading."	False
+"'I will always love you; but please, move on. For yourself, for me, for our child. [line break]
+[line break]Forever yours. [line break]Your wife, [line break][line break]Kate In-young Dessalegn'"	True
 
 [Prefabs]
 Nighttime is a scene. Nighttime begins when the time of day is after sunset. Nighttime ends when the time of day is sunrise.
@@ -22,12 +35,13 @@ A window is a kind of thing that is fixed in place. The description of a window 
 Everything is perfect.".
 
 [Verbs/ synonyms]
-Understand "sink into [something]" as entering.
+Understand "sink into [something]" and "sit down" as entering.
 [TODO: make music a real thing >:D]
 Understand "chair" as armchair.
-Understand "sit down" as entering.
 Understand "close eyes", "breathe", and "close  your eyes" as waiting.
 Understand "look around" as looking.
+Understand "view [something]" as examining.
+Understand the command "read" as something new. Understand "read [something]" as reading. Reading is an action applying to one thing. 
 
 [Start]
 When play begins:
@@ -62,6 +76,11 @@ The bedroom window is a window in Bedroom. [Enables photoframe]
 The living room window is a window in Living Room. [Enables photoframe]
 The armchair is a thing in the Living Room. The armchair is an enterable supporter and fixed in place. The description is "It's a perfect replica of the same one your grandfather owned. It even smells of old cigarette smoke."
 The clock is a thing. The description is "Well, time sure flies. The clock reads [if use analog is true][time of day in words][otherwise][time of day][end if].". The clock is nowhere.
+The desk is a supporter. The desk is nowhere. The description is "A clear, wooden desk, popular back in the 2030's.  You picked it out, when you first got your own place. It brings back so many memories."
+The shredder is a thing on the desk. The description is "Despite its small size, it has turned many pieces of paper to dust."
+The laptop is a thing on the desk. 
+The letter is a thing on the desk. The description is "Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read.".
+
 [Interactions/Rules]
 Before examining yourself:
 	say "You look down at yourself. You're wearing your best Sunday clothes, but it feels like wearing pajamas."; [TODO: change this to reflect your life satisfaction]
@@ -100,14 +119,19 @@ Before waiting:
 	otherwise:
 		say "You wait, patiently.".
 Before examining a clock:
+	Increase clock counter by 1;
 	Now time changed by clock is true;
 	Let X be a random number from 1 to 60;
 	Let Y be the time of day plus x minus 1 minutes;
 	Now the time of day is Y;
+	If clock counter is greater than 4:
+		say "Life is composed of moments, unmeasurable by any clock.";
+	if clock counter is greater than 5:
+		say "[italic type]The more conscious we are of our time left, the less time we actually end up having.";
 	If seen clock is false:
 		Increase introspection counter by 1; [should now be 4]
 		Now seen clock is true;
-		say "Your mother taught you how to read an analog clock; how 21st century she was. Do you remember how to read an analog clock?";
+		say "Your mother taught you how to read an analog clock; [italic type]how 21st century she was. [roman type]Do you remember how to read an analog clock?";
 		if player consents:
 			say "She was a good teacher, despite not being a good mother.
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
@@ -122,10 +146,32 @@ Before examining a clock:
 			Now use analog is false;
 			Increase life dissatisfaction by 3;
 		if use analog is true:
-			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words] tomorrow morning, when you, too, will pass and join her.  [line break]This is what I've coded so far. _hung";
+			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words] tomorrow morning, when you, too, will pass and join her.";
 		otherwise:
-			say "With your grandfather in your mind and heart, you're reminded that you have until [time of death] tomorrow, when you, too, will pass and join him.  [line break]This is what I've coded so far. _hung";
-	continue the action.
+			say "With your grandfather in your mind and heart, you're reminded that you have until [time of death] tomorrow, when you, too, will pass and join him.";
+		continue the action;
+	otherwise if introspection counter is 4:
+		say "Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman[’]s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.[line break]
+			[line break] And it was a simple decision, really. 
+			[line break] You can remember the exact layout of your desk, years ago. You turn around and see it just the way it was that day, in the corner of the room.";
+		now the desk is in the Living Room.
+Check reading:
+	if the noun is the letter:
+		say "The letter reads:[line break]";
+		repeat with i running from 1 to the number of filled rows in the Table of Letter:
+			choose row i in the Table of Letter;
+			say "[Line entry] ";
+			if EOF entry is true:
+				say "You reached the end of the letter. More blotches.";
+			otherwise:
+				say "Continue?";
+			if player consents:
+				next;
+			otherwise:
+				say "You put the letter down. Her words remind you of her too much.";
+				break.
+				
+
 Before going to the Hallway:
 	say "You're not supposed to leave. Are you sure you want to?";
 	if player consents:
