@@ -1,18 +1,18 @@
 ! Blurb file created by Inform build 6M62
 
-status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "E:\if_projects\test.inform\Build\StatusCblorb.html"
+status "C:\Program Files (x86)\Inform 7\Internal\Miscellany\CblorbModel.html" "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\StatusCblorb.html"
 
 
 ! Identification
 
-project folder "E:\if_projects\test.inform"
-release to "E:\if_projects\test.materials\Release"
+project folder "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform"
+release to "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Release"
 
 ! Blorb instructions
 
 storyfile leafname "Living.gblorb"
-storyfile "E:\if_projects\test.inform\Build\output.ulx" include
-ifiction "E:\if_projects\test.inform\Metadata.iFiction" include
+storyfile "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\output.ulx" include
+ifiction "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Metadata.iFiction" include
 cover "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
 picture 1 "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
 release file "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
@@ -34,16 +34,16 @@ source public
 ! Website instructions
 
 placeholder [ENCODEDSTORYFILE] = "Living.gblorb.js"
-template path "E:\if_projects\test.materials\Templates"
+template path "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Templates"
 template path "C:\Users\user\Documents\Inform\Templates"
 template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Quixe" "g"
-base64 "E:\if_projects\test.inform\Build\output.ulx" to "E:\if_projects\test.materials\Release\interpreter\Living.gblorb.js"
+base64 "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\output.ulx" to "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Release\interpreter\Living.gblorb.js"
 
 ! Website instructions
 
-template path "E:\if_projects\test.materials\Templates"
+template path "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Templates"
 template path "C:\Users\user\Documents\Inform\Templates"
 template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
 css

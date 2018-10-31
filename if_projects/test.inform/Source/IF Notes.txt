@@ -27,5 +27,42 @@ You have [Time of death – the time of day] left.
 It’s been x minutes since you last checked. You have [time of death – the time of day] left.
 ---------- coded the above --------------
 
-You can see the off-brand Lego pieces that you used to play with, lying on the carpeted floor next to your grandpa’s gnarly feet. 
-[as you wait]
+
+[X clock]
+It’s been x minutes since you last checked. You have [time of death – the time of day] left. 
+(I want the player to constantly remind themselves of their mortality and makes the flashback make more sense.)
+
+Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman’s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones. 
+
+And it was a simple decision, really.
+You can remember the exact layout of your desk. You turn around and see it just the way it was that day, in the corner of the room.
+
+[look]
+There’s a desk in the room (among all the previous things)
+
+(on the desk, there’s a laptop at the webpage to subscribe, as well as an opened, unsealed letter from your wife.)
+
+[x letter]
+Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read. 
+
+[read letter]
+\“Babe, I love you.\”
+[Continue reading? y/n] [loop]  
+The words \”I’m sorry.\” was scribbled out, but you can still see it underneath the ink marks. \”Thank you. For everything. For all the loving moments.\”
+I’m sorry that I must leave you early. I’m sorry I must leave our child motherless early.
+[if lovedMom] But I know he will grow up to be amazing regardless; you certainly did.
+[otherwise] I can only hope I was a better mother to him, than your mother was to you.
+
+I want to give him
+
+
+
+One \”Subscribe\” button, two annual checkups; Three deaths
+
+and you were now a part of the new human evolution. 
+Two
+
+You were one of those people. [line break][line break]Were.
+
+
+

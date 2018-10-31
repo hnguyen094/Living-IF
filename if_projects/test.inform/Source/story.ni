@@ -63,20 +63,27 @@ The living room window is a window in Living Room. [Enables photoframe]
 The armchair is a thing in the Living Room. The armchair is an enterable supporter and fixed in place. The description is "It's a perfect replica of the same one your grandfather owned. It even smells of old cigarette smoke."
 The clock is a thing. The description is "Well, time sure flies. The clock reads [if use analog is true][time of day in words][otherwise][time of day][end if].". The clock is nowhere.
 [Interactions/Rules]
+Before examining yourself:
+	say "You look down at yourself. You're wearing your best Sunday clothes, but it feels like wearing pajamas."; [TODO: change this to reflect your life satisfaction]
+	stop the action.
 Before looking:
 	if started is false:
 		now started is true;
 		say "You mentally turn off Queen from playing in your head.
 				[line break][italic type]It's old and overplayed,[roman type] you thought to yourself and get out of bed.".
 Before entering the bed:
-    say "You fall onto the bed, as it engulps you.
+    say "You fall onto the bed, as it engulfs you.
 [line break]Ah. It's soft. You could stay here forever.
 [line break]You get up again, though. [italic type]There's a time and place for everything. But not now.";
 	stop the action.
-After entering armchair: [TODO: make gendered memories or choices]
-	if introspection counter is 1:
-	  say "You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. [line break]You open your eyes and turn towards your room, wanting to look around."; [TODO: add something that changes base on nighttime]
-		Increase introspection counter by 1. [should now be 1]
+Entering armchair is being reminicsient.
+Touching armchair is being reminiscient.
+Before entering armchair: [TODO: make gendered memories or choices]
+	if introspection counter is 0:
+		say "You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. [line break]You open your eyes and turn towards your room, wanting to look around."; [TODO: add something that changes base on nighttime]
+		Increase introspection counter by 1;[should now be 1]
+		move the player to the armchair;
+		stop the action.
 Before looking in the Living Room:
 	if introspection counter is 1:
 		Say "You wanted this room earlier today. It reminds you of the emptiness of life, and your impending death.
@@ -84,15 +91,14 @@ Before looking in the Living Room:
 		Increase introspection counter by 1; [should now be 2]
 		stop the action;
 	otherwise if introspection counter is 4:
-		say "Do something, you lazy bum. LOL this is just a placeholder";
-		stop the action.
+		continue the action.
 Before waiting:
 	if introspection counter is 2:
 		say "[italic type]Breathe,[roman type] you tell yourself. In the silence, the clock ticks.";
 		Increase introspection counter by 1; [should now be 3]
 		Now the clock is in the Living Room;
 	otherwise:
-		say "You wait, patiently. LOL this is just a placeholder".
+		say "You wait, patiently.".
 Before examining a clock:
 	Now time changed by clock is true;
 	Let X be a random number from 1 to 60;
@@ -116,9 +122,9 @@ Before examining a clock:
 			Now use analog is false;
 			Increase life dissatisfaction by 3;
 		if use analog is true:
-			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words], when you, too, will pass and join her.";
+			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words] tomorrow morning, when you, too, will pass and join her.  [line break]This is what I've coded so far. _hung";
 		otherwise:
-			say "With your grandfather in your mind and heart, you're reminded that you have until [time of death], when you, too, will pass and join him.";
+			say "With your grandfather in your mind and heart, you're reminded that you have until [time of death] tomorrow, when you, too, will pass and join him.  [line break]This is what I've coded so far. _hung";
 	continue the action.
 Before going to the Hallway:
 	say "You're not supposed to leave. Are you sure you want to?";
