@@ -48,6 +48,7 @@ Understand "view [something]" as examining.
 Understand the command "read" as something new. Understand "read [something]" as reading. Reading is an action applying to one thing. 
 Understand the command "tear" as something new. Understand "tear [something]" as tearing. Tearing is an action applying to one thing.
 Understand "tap [something]" as touching.
+Understand the command "kill" as something new. Understand "kill [something]" as killing. Killing is an action applying to one thing.
 
 [Start]
 When play begins:
@@ -74,7 +75,7 @@ Every turn:
 Bedroom is a room.  The description is "Your bed is perfectly made. Outside the window, you can see
 [if nighttime is happening]the beautiful Manhattan skyline at night like a million stars[otherwise]the sun setting on the Manhattan skyline, bleeding orange onto you[end if].
 The living room lies to the north of your bedroom." [TODO Change the backdrop scenery]
-Living Room is a room. The description is "[if introspection counter < 4]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter is 5]Mostly bare, but it's beginning to remind you of something.[otherwise]The room is filled with the objects of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the south[if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom. [TODO: changes the description when it starts filling up]
+Living Room is a room. The description is "[if introspection counter < 4]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter is 4]Mostly bare, but it's beginning to remind you of something.[otherwise]The room is filled with the objects of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the south[if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom. [TODO: changes the description when it starts filling up]
 Hallway is a room. "It's pitch black. The light from the living room behind you isn't doing anything at all.". [It is east of the Living Room.]
 The Space of Reflection is a room. "You shouldn't be here. Your head hurts." It is east of the Hallway.
 
@@ -237,6 +238,15 @@ Before going to the Hallway:
 		continue the action;
 	otherwise:
 		stop the action.
+
+Before killing yourself:
+	if introspection counter < 5:
+		say "You don[']t quite think it[']s time yet.";
+	otherwise:
+		say "You[']re getting rather tired. The bed must be nearby.";
+	if bed is visible and introspection counter is 5:
+		say "You just want to get in bed...";
+	stop the action;
 Before going to the The Space of Reflection:
 	if introspection counter is less than 2:
 		say "It's pitch black.";
