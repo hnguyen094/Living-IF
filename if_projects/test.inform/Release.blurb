@@ -10,7 +10,7 @@ release to "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\
 
 ! Blorb instructions
 
-storyfile leafname "we all Die.gblorb"
+storyfile leafname "The Clock Ticks for You.gblorb"
 storyfile "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\output.ulx" include
 ifiction "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Metadata.iFiction" include
 cover "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Cover.jpg"
@@ -23,7 +23,7 @@ release file "C:\Program Files (x86)\Inform 7\Internal\Miscellany\Small Cover.jp
 placeholder [IFID] = "B98CE9CD-ED82-4827-AB70-3486EC6138D2"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2018"
-placeholder [TITLE] = "we all Die"
+placeholder [TITLE] = "The Clock Ticks for You"
 placeholder [AUTHOR] = "Hung Nguyen"
 placeholder [BLURB] = "A work of interactive fiction."
 
@@ -33,13 +33,13 @@ source public
 
 ! Website instructions
 
-placeholder [ENCODEDSTORYFILE] = "we all Die.gblorb.js"
+placeholder [ENCODEDSTORYFILE] = "The Clock Ticks for You.gblorb.js"
 template path "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Templates"
 template path "C:\Users\user\Documents\Inform\Templates"
 template path "C:\Program Files (x86)\Inform 7\Internal\Templates"
 placeholder [INTERPRETERSCRIPTS] = " "
 interpreter "Quixe" "g"
-base64 "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\output.ulx" to "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Release\interpreter\we all Die.gblorb.js"
+base64 "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.inform\Build\output.ulx" to "C:\Users\user\Documents\GitHub\Living-IF\if_projects\test.materials\Release\interpreter\The Clock Ticks for You.gblorb.js"
 
 ! Website instructions
 

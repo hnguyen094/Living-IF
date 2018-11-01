@@ -1,4 +1,4 @@
-"we all Die" by "Hung Nguyen".
+"The Clock Ticks for You" by "Hung Nguyen".
 Release along with a website. Release along with an interpreter.
 Release along with the source text.
 
