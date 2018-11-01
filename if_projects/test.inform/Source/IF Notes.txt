@@ -46,24 +46,23 @@ There’s a desk in the room (among all the previous things)
 Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read. 
 
 [read letter]
-\“Babe, I love you.\”
+‘Babe, I love you.’
 [Continue reading? y/n] [loop]  
-The words \”I’m sorry.\” was scribbled out, but you can still see it underneath the ink marks. \”Thank you. For everything. For all the loving moments.\”
-\”I’m sorry that I must leave you early. I’m sorry I must leave our child motherless early.
+The words ‘I’m sorry.’ was scribbled out, but you can still see it underneath the ink marks. ‘Thank you. For everything. For all the loving moments.’
+‘I’m sorry that I must leave you early. I’m sorry I must leave our child motherless early.
 [if lovedMom] But I know he will grow up to be amazing regardless; you certainly did.
 [otherwise] I can only hope I was a better mother to him, than yours was to you.
-Be his friend and his dad. 
+Still, Be his friend and his dad. 
 Give him the talk when he’s older. 
 Take him to the baseball games or buy him makeup; whatever he’s into.
-Love him. Love him again. Love him twice, so he can feel my love, too.\”
+Love him. Love him again. Love him twice, so he can feel my love, too.’
 The text becomes a blur, but you blink a few times. More blotches appear on the letter.
-\”Lastly, mourn for me. Cry, punch, scream, write; whatever you need. 
+‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need. 
 Then move on.
-I will always love you; but I need you to move on. 
-For yourself, for me, for our child.\”
+I will always love you; but please, move on. For yourself, for me, for our child.’
 
-\”Forever yours,
-Kate In-young Dessalegn\” 
+‘Forever yours,
+Kate In-young Dessalegn’ 
 [italic type]  Breathe.[roman type] 
 [italic type]  Breathe.[roman type] 
 You hold the letter in your hand and can remember what you did next.
@@ -74,7 +73,7 @@ You hold the letter in your hand and can remember what you did next.
 
 
 
-One \”Subscribe\” button, two annual checkups; Three deaths
+One ‘Subscribe’ button, two annual checkups; Three deaths
 
 and you were now a part of the new human evolution. 
 Two
@@ -82,4 +81,5 @@ Two
 You were one of those people. [line break][line break]Were.
 
 
+Life satisfaction + Life dissatisfaction)
 

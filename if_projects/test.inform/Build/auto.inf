@@ -12206,10 +12206,10 @@ Array ActionHappened --> 0 0 0 0 0 0;
     ParaContent(); print "Caught in a landslide";! [11: line break]
     ParaContent(); new_line;! [12: ~No escape from reality...~]
     ParaContent(); print "No escape from reality...";! [13: roman type]
-    ParaContent(); style roman; .L_Say1; .L_SayX1;! [14: say ~[line break]cw: suicide/euthanasia, depression~]
+    ParaContent(); style roman; .L_Say1; .L_SayX1;! [14: say ~[line break]cw: euthanasia, depression~]
     say__p=1;! [15: line break]
-    ParaContent(); new_line;! [16: ~cw: suicide/euthanasia, depression~]
-    ParaContent(); print "cw: suicide/euthanasia, depression"; .L_Say2; .L_SayX2;rfalse;
+    ParaContent(); new_line;! [16: ~cw: euthanasia, depression~]
+    ParaContent(); print "cw: euthanasia, depression"; .L_Say2; .L_SayX2;rfalse;
 ];
 ! ----------------------------------------------------------------------------------------------------
 
