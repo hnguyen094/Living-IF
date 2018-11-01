@@ -160,14 +160,14 @@ Before checking the time:
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
 				[line break][line break]You miss her.[line break][line break]";
 			Now use analog is true;
-			Increase life satisfaction by 2;
+			Increase life satisfaction by 1;
 		otherwise:
 			say "The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that.
 					[line break][italic type]    Breathe.[roman type][line break]Her birth date is July 29th, 2003.
 					[line break][italic type]    Breathe.[roman type][line break]She’s a Leo. Your grandfather was also a Leo. You miss him.
 					[line break][italic type]    Breathe.[roman type][line break]You regain some composure, as your mind wandered back to him."; [TODO: haven't done anything here]
 			Now use analog is false;
-			Increase life dissatisfaction by 3;
+			Increase life dissatisfaction by 2;
 		if use analog is true:
 			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words] tomorrow morning, when you, too, will pass and join her.";
 		otherwise:
@@ -226,10 +226,10 @@ Instead of touching laptop:
 		say "This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. [line break][line break]How wrong you were. [italic type]Why did I click it? [roman type]Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence.";
 		remove laptop from play;
 		if shredded is true: 
-			increase life dissatisfaction by 2;
+			increase life dissatisfaction by 3;
 		Otherwise: 
 			increase life satisfaction by 2;
-		If regained composure is true, increase life satisfaction by 1;
+		If regained composure is true, increase life satisfaction by 3;
 		if stopped reading is true, increase life dissatisfaction by 1;
 		say "(EN: This is what I've made so far - there is a specific action left, which can end the game. You can also wait around until the game ends, up to you. - Hung)".
 Before going to the Hallway:

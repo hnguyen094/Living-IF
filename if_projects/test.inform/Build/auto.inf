@@ -12971,8 +12971,8 @@ Array ActionHappened --> 0 0 0 0 0 0;
             ParaContent(); new_line;! [34: line break]
             ParaContent(); new_line; .L_Say25; .L_SayX25;! [35: now use analog is true]
             (Global_Vars-->19) = 1;
-            ! [36: increase life satisfaction by 2]
-            (Global_Vars-->16) = (Global_Vars-->16) + 2;;
+            ! [36: increase life satisfaction by 1]
+            (Global_Vars-->16) = (Global_Vars-->16) + 1;;
             } else {
             ! [37: say ~The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that. [line break][italic type]    Breathe.[roman type][line break]Her birth date is July 29th, 2003. [line break][italic type]    Breathe.[roman type][line break]She's a Leo. Your grandfather was also a Leo. You miss him. [line break][italic type]    Breathe.[roman type][line break]You regain some composure, as your mind wandered back to him.~]
             say__p=1;! [38: ~The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that. ~]
@@ -12996,8 +12996,8 @@ Array ActionHappened --> 0 0 0 0 0 0;
             ParaContent(); new_line;! [56: ~You regain some composure, as your mind wandered back to him.~]
             ParaContent(); print "You regain some composure, as your mind wandered back to him."; new_line; .L_Say26; .L_SayX26;! [57: now use analog is false]
             (Global_Vars-->19) = 0;
-            ! [58: increase life dissatisfaction by 3]
-            (Global_Vars-->17) = (Global_Vars-->17) + 3;;
+            ! [58: increase life dissatisfaction by 2]
+            (Global_Vars-->17) = (Global_Vars-->17) + 2;;
             }
         ! [59: if use analog is true]
         if (((((Global_Vars-->19) && true) == (1 && true))))
@@ -13178,16 +13178,16 @@ Array ActionHappened --> 0 0 0 0 0 0;
         RemoveFromPlay(I138_laptop);
         ! [20: if shredded is true]
         if (((((Global_Vars-->25) && true) == (1 && true))))
-        {! [21: increase life dissatisfaction by 2]
-            (Global_Vars-->17) = (Global_Vars-->17) + 2;;
+        {! [21: increase life dissatisfaction by 3]
+            (Global_Vars-->17) = (Global_Vars-->17) + 3;;
             } else {
             ! [22: increase life satisfaction by 2]
             (Global_Vars-->16) = (Global_Vars-->16) + 2;;
             }
         ! [23: if regained composure is true]
         if (((((Global_Vars-->24) && true) == (1 && true))))
-        {! [24: increase life satisfaction by 1]
-            (Global_Vars-->16) = (Global_Vars-->16) + 1;;
+        {! [24: increase life satisfaction by 3]
+            (Global_Vars-->16) = (Global_Vars-->16) + 3;;
             }
         ! [25: if stopped reading is true]
         if (((((Global_Vars-->23) && true) == (1 && true))))
