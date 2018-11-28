@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-867"/>
+  <activeNode nodeId="node-963"/>
   <item nodeId="node-1">
     <command xml:space="preserve">test</command>
-    <result xml:space="preserve">Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;[cw: euthanasia, suicide/suicidal behavior, depression]&#x000A;Type "help" for common commands often used in interactive fiction pieces like these.&#x000A;&#x000A;The Clock Ticks for You&#x000A;An Interactive Fiction by Hung Nguyen&#x000A;Release 1 / Serial number 181127 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;[cw: euthanasia, suicide/suicidal behavior, depression]&#x000A;Type "help" for common commands often used in interactive fiction pieces like these.&#x000A;&#x000A;The Clock Ticks for You&#x000A;An Interactive Fiction by Hung Nguyen&#x000A;Release 1 / Serial number 181127 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
     <commentary xml:space="preserve">Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;Test&#x000A;An Interactive Fiction by Hung&#x000A;Release 1 / Serial number 181024 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed (empty) and a bedroom window here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
@@ -3469,7 +3469,7 @@
   </item>
   <item nodeId="node-389">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">It's been forty-four minutes. It is twenty-one minutes past seven.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You wait, patiently. &#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -3479,7 +3479,7 @@
   </item>
   <item nodeId="node-390">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">It's been five minutes. It is twenty to eight.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You wait, patiently. &#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -3488,12 +3488,13 @@
   </item>
   <item nodeId="node-391">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">It's been forty-two minutes. It is twenty-three minutes past eight.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">You wait, patiently. &#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
       <child nodeId="node-392"/>
       <child nodeId="node-402"/>
+      <child nodeId="node-868"/>
     </children>
   </item>
   <item nodeId="node-392">
@@ -3675,6 +3676,264 @@
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
   </item>
+  <item nodeId="node-868">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-869"/>
+    </children>
+  </item>
+  <item nodeId="node-869">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Living Room&#x000A;Mostly bare, just the way you wanted it yesterday. An armchair sits dead center, facing the window.  The bedroom lies to the south.&#x000A;&#x000A;You can see a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-870"/>
+    </children>
+  </item>
+  <item nodeId="node-870">
+    <command xml:space="preserve">sit</command>
+    <result xml:space="preserve">What do you want to sit on?&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-871"/>
+    </children>
+  </item>
+  <item nodeId="node-871">
+    <command xml:space="preserve">chair</command>
+    <result xml:space="preserve">You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. &#x000A;You open your eyes and turn towards your room, wanting to look around.&#x000A;&#x000A;You wanted this room like this. It reminds you of the emptiness of life, and your impending death. &#x000A;You just want to close your eyes and wait here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-872"/>
+    </children>
+  </item>
+  <item nodeId="node-872">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Breathe, you tell yourself. In the silence, the clock ticks.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-873"/>
+    </children>
+  </item>
+  <item nodeId="node-873">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Your mother taught you how to read an analog clock; how 21st century she was. Do you remember how to read an analog clock? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-874"/>
+    </children>
+  </item>
+  <item nodeId="node-874">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">She was a good teacher, despite not being a good mother. &#x000A;You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn't want to see you like this. &#x000A;&#x000A;You miss her.&#x000A;&#x000A;With your mother in your mind and heart, you're reminded that you have until seven o'clock tomorrow morning, when you, too, will pass and join her.&#x000A;&#x000A;Well, time sure flies. The clock reads seven minutes to seven. &#x000A;&#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-875"/>
+    </children>
+  </item>
+  <item nodeId="node-875">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room.&#x000A;Well, time sure flies. The clock reads quarter to eight. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-876"/>
+    </children>
+  </item>
+  <item nodeId="node-876">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Well, time sure flies. The clock reads twenty-nine minutes to nine. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-877"/>
+    </children>
+  </item>
+  <item nodeId="node-877">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Well, time sure flies. The clock reads eighteen minutes past nine. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-878"/>
+    </children>
+  </item>
+  <item nodeId="node-878">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;Well, time sure flies. The clock reads twenty-nine minutes past nine. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-879"/>
+    </children>
+  </item>
+  <item nodeId="node-879">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads two minutes past ten. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-880"/>
+    </children>
+  </item>
+  <item nodeId="node-880">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads one minute past eleven. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-881"/>
+    </children>
+  </item>
+  <item nodeId="node-881">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads eighteen minutes to twelve. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-882"/>
+    </children>
+  </item>
+  <item nodeId="node-882">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads twenty-five to one. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-883"/>
+    </children>
+  </item>
+  <item nodeId="node-883">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads eighteen minutes past one. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-884"/>
+    </children>
+  </item>
+  <item nodeId="node-884">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads eleven minutes to two. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-885"/>
+    </children>
+  </item>
+  <item nodeId="node-885">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads twenty-two minutes past two. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-886"/>
+    </children>
+  </item>
+  <item nodeId="node-886">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads thirteen minutes to three. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-887"/>
+    </children>
+  </item>
+  <item nodeId="node-887">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads twenty-eight minutes past three. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-888"/>
+    </children>
+  </item>
+  <item nodeId="node-888">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads quarter past four. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-889"/>
+    </children>
+  </item>
+  <item nodeId="node-889">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads seven minutes to five. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-890"/>
+    </children>
+  </item>
+  <item nodeId="node-890">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads twenty-four minutes past five. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-891"/>
+    </children>
+  </item>
+  <item nodeId="node-891">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads twenty past six. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-892"/>
+    </children>
+  </item>
+  <item nodeId="node-892">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads nine minutes to seven. &#x000A;What do you do this moment? 66&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-893"/>
+    </children>
+  </item>
+  <item nodeId="node-893">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Life is composed of moments, unmeasurable by any clock.&#x000A;The more conscious we are of our time left, the less time we actually end up having. Well, time sure flies. The clock reads thirteen minutes past seven. &#x000A;Your strength suddenly fades. Your time is up.  Just a victim of circumstance, you lie to yourself, one last time. You won't wake again.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-894"/>
+    </children>
+  </item>
+  <item nodeId="node-894">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Please give one of the answers above.&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-895"/>
+    </children>
+  </item>
+  <item nodeId="node-895">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Please give one of the answers above.&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-896"/>
+    </children>
+  </item>
+  <item nodeId="node-896">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Please give one of the answers above.&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+  </item>
   <item nodeId="node-413">
     <command xml:space="preserve"></command>
     <result xml:space="preserve">I beg your pardon?&#x000A;&#x000A;&gt;</result>
@@ -3779,12 +4038,13 @@
   </item>
   <item nodeId="node-425">
     <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-426"/>
       <child nodeId="node-810"/>
+      <child nodeId="node-897"/>
     </children>
   </item>
   <item nodeId="node-426">
@@ -4027,7 +4287,7 @@
   </item>
   <item nodeId="node-830">
     <command xml:space="preserve">y</command>
-    <result xml:space="preserve">She was a good teacher, despite not being a good mother. &#x000A;You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn't want to see you like this. &#x000A;&#x000A;You miss her.&#x000A;&#x000A;With your mother in your mind and heart, you're reminded that you have until seven o'clock tomorrow morning, when you, too, will pass and join her.&#x000A;&#x000A;Well, time sure flies. The clock reads twenty-six minutes to eight.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">She was a good teacher, despite not being a good mother. &#x000A;You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn't want to see you like this. &#x000A;&#x000A;You miss her.&#x000A;&#x000A;With your mother in your mind and heart, you're reminded that you have until seven o'clock tomorrow morning, when you, too, will pass and join her.&#x000A;&#x000A;Well, time sure flies. The clock reads half past seven.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -4063,7 +4323,7 @@
   </item>
   <item nodeId="node-834">
     <command xml:space="preserve">x clock</command>
-    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room.&#x000A;Well, time sure flies. The clock reads twenty-nine minutes past nine.&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room.&#x000A;Well, time sure flies. The clock reads twenty past nine.&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -4137,7 +4397,7 @@
     <command xml:space="preserve">l</command>
     <result xml:space="preserve">Living Room (on the armchair)&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock and a living room window here.&#x000A;&#x000A;I am potatoes&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>YES</changed>
+    <changed>NO</changed>
     <children>
       <child nodeId="node-843"/>
     </children>
@@ -4252,7 +4512,7 @@
   </item>
   <item nodeId="node-855">
     <command xml:space="preserve">x clock</command>
-    <result xml:space="preserve">[examining the clock]&#x000A;Well, time sure flies. The clock reads quarter past two.[examining the clock - ended without result]&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">[examining the clock]&#x000A;Well, time sure flies. The clock reads twenty-seven minutes to two.[examining the clock - ended without result]&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -4270,7 +4530,7 @@
   </item>
   <item nodeId="node-857">
     <command xml:space="preserve">y</command>
-    <result xml:space="preserve">This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. &#x000A;&#x000A;How wrong you were. Why did I click it? Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. &#x000A;This is the end. There's only one thing left for me to do here. It's already sixteen minutes past two.&#x000A;[touching the laptop - failed]&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. &#x000A;&#x000A;How wrong you were. Why did I click it? Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. &#x000A;This is the end. There's only one thing left for me to do here. It's already twenty-six minutes to two.&#x000A;[touching the laptop - failed]&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -4324,18 +4584,18 @@
   </item>
   <item nodeId="node-863">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">You wait, patiently. The bed is in the next room.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-864"/>
     </children>
   </item>
   <item nodeId="node-864">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">You wait, patiently. The bed is in the next room.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-865"/>
     </children>
@@ -4360,7 +4620,607 @@
   </item>
   <item nodeId="node-867">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">You wait, patiently. The bed is in the next room.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+  </item>
+  <item nodeId="node-897">
+    <command xml:space="preserve">x window</command>
+    <result xml:space="preserve">Outside, Manhattan glitters gold beneath you. Everything is perfect. &#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-898"/>
+    </children>
+  </item>
+  <item nodeId="node-898">
+    <command xml:space="preserve">x bed</command>
+    <result xml:space="preserve">Tidy and perfect; you probably could sink into it. &#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-899"/>
+    </children>
+  </item>
+  <item nodeId="node-899">
+    <command xml:space="preserve">sink into bed</command>
+    <result xml:space="preserve">You fall onto the bed, as it engulfs you. &#x000A;Ah. It's soft. You could stay here forever.&#x000A;&#x000A;You get up again, though. There's a time and place for everything. But not now.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-900"/>
+    </children>
+  </item>
+  <item nodeId="node-900">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Living Room&#x000A;Mostly bare, just the way you wanted it yesterday. An armchair sits dead center, facing the window.  The bedroom lies to the south.&#x000A;&#x000A;You can see a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-901"/>
+    </children>
+  </item>
+  <item nodeId="node-901">
+    <command xml:space="preserve">sit in chair</command>
+    <result xml:space="preserve">You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. &#x000A;You open your eyes and turn towards your room, wanting to look around.&#x000A;&#x000A;You wanted this room like this. It reminds you of the emptiness of life, and your impending death. &#x000A;You just want to close your eyes and wait here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-902"/>
+    </children>
+  </item>
+  <item nodeId="node-902">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Breathe, you tell yourself. In the silence, the clock ticks.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-903"/>
+    </children>
+  </item>
+  <item nodeId="node-903">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">(first getting off the armchair)&#x000A;You can't go that way.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-904"/>
+    </children>
+  </item>
+  <item nodeId="node-904">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;Mostly bare, just the way you wanted it yesterday. An armchair sits dead center, facing the window.  The bedroom lies to the south.&#x000A;&#x000A;You can see a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-905"/>
+    </children>
+  </item>
+  <item nodeId="node-905">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">Breathe, you tell yourself. In the silence, the clock ticks.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-906"/>
+    </children>
+  </item>
+  <item nodeId="node-906">
+    <command xml:space="preserve">tick</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-907"/>
+    </children>
+  </item>
+  <item nodeId="node-907">
+    <command xml:space="preserve">clock</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;What do you do this moment? 50&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-908"/>
+    </children>
+  </item>
+  <item nodeId="node-908">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Your mother taught you how to read an analog clock. How 21st century she was. Do you remember how to read an analog clock? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-909"/>
+    </children>
+  </item>
+  <item nodeId="node-909">
+    <command xml:space="preserve">no</command>
+    <result xml:space="preserve">The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that. &#x000A;    Breathe.&#x000A;Her birth date is July 29th, 2003. &#x000A;    Breathe.&#x000A;She's a Leo. Your grandfather was also a Leo. You miss him. &#x000A;    Breathe.&#x000A;You regain some composure, as your mind wandered back to him.&#x000A;With your grandfather in your mind and heart, you're reminded that you have until 7:00 am tomorrow, when you, too, will pass and join him.&#x000A;&#x000A;Well, time sure flies. The clock reads 7:24 pm. &#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-910"/>
+    </children>
+  </item>
+  <item nodeId="node-910">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;Mostly bare, but it's beginning to remind you of something. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-911"/>
+    </children>
+  </item>
+  <item nodeId="node-911">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room. Well, time sure flies. The clock reads 8:32 pm. &#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-912"/>
+    </children>
+  </item>
+  <item nodeId="node-912">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-913"/>
+    </children>
+  </item>
+  <item nodeId="node-913">
+    <command xml:space="preserve">read letter</command>
+    <result xml:space="preserve">The letter reads:&#x000A;"Babe, I love you. &#x000A;The words "I'm sorry" was scribbled out, but you can still see it underneath the ink marks. "Thank you. For everything. For all the loving moments." Continue?  &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-914"/>
+    </children>
+  </item>
+  <item nodeId="node-914">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">"I'm sorry that I must leave you early. I'm sorry I must leave our child motherless early. "I can only hope I was a better mother to him, than yours was to you." Continue?  &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-915"/>
+    </children>
+  </item>
+  <item nodeId="node-915">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">"Still, Be his friend and his dad. Take him to the baseball games or buy him makeup; whatever he's into." Continue?  &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-916"/>
+    </children>
+  </item>
+  <item nodeId="node-916">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">"Love him. Love him again. Love him twice, so he can feel my love, too."&#x000A;The text becomes a blur as your eyes water and your hands shake.&#x000A;Breathe. You don't want to keep reading. Continue?  &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-917"/>
+    </children>
+  </item>
+  <item nodeId="node-917">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Still, you wipe away the tears, and read on. "Lastly, mourn for me. Cry, punch, scream, write; whatever you need. &#x000A;Then move on." Continue?  &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-918"/>
+    </children>
+  </item>
+  <item nodeId="node-918">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">"I will always love you; but please, move on. For yourself, for me, for our child. &#x000A;Forever yours. &#x000A;Your wife, &#x000A;&#x000A;Kate In-young Dessalegn."&#x000A;Your legs give out beneath you, and you break down in tears. You just need a moment to be okay.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-919"/>
+    </children>
+  </item>
+  <item nodeId="node-919">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. &#x000A;Time passes.&#x000A;&#x000A;Breathe, you tell yourself. You wipe away the tears, regain control of your legs and arms, and pull yourself up. You look at the letter in your hand.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-920"/>
+    </children>
+  </item>
+  <item nodeId="node-920">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. &#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-921"/>
+    </children>
+  </item>
+  <item nodeId="node-921">
+    <command xml:space="preserve">look</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-922"/>
+    </children>
+  </item>
+  <item nodeId="node-922">
+    <command xml:space="preserve">shred laptop</command>
+    <result xml:space="preserve">What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-923"/>
+    </children>
+  </item>
+  <item nodeId="node-923">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-924"/>
+    </children>
+  </item>
+  <item nodeId="node-924">
+    <command xml:space="preserve">shred letter</command>
+    <result xml:space="preserve">Are you sure you want to shred the letter? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-925"/>
+    </children>
+  </item>
+  <item nodeId="node-925">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">Feeling betrayed, you put the letter into the shredder. &#x000A;"Bbbbbbbbbshhhhhhzzzzzzzzzzzzzzzzzzzz," the shredder hummed.&#x000A;&#x000A;The letter is now completely destroyed, just like it was before, when you first read it years ago.&#x000A;How could she? You thought to yourself back then. She didn't even fight it; she just accepted her death, and let the illness take her. You turn to the laptop, and you remembered how you found yourself here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-926"/>
+    </children>
+  </item>
+  <item nodeId="node-926">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (in which is a shredded letter) and a laptop), a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-927"/>
+    </children>
+  </item>
+  <item nodeId="node-927">
+    <command xml:space="preserve">take shredded letter out</command>
+    <result xml:space="preserve">I only understood you as far as wanting to take the shredded letter.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-928"/>
+    </children>
+  </item>
+  <item nodeId="node-928">
+    <command xml:space="preserve">take shredded letter</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-929"/>
+    </children>
+  </item>
+  <item nodeId="node-929">
+    <command xml:space="preserve">read shredded letter</command>
+    <result xml:space="preserve">Just the shredded handwriting of your wife.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-930"/>
+    </children>
+  </item>
+  <item nodeId="node-930">
+    <command xml:space="preserve">read letter</command>
+    <result xml:space="preserve">Just the shredded handwriting of your wife.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-931"/>
+    </children>
+  </item>
+  <item nodeId="node-931">
+    <command xml:space="preserve">kill self</command>
+    <result xml:space="preserve">You don't quite think it's time yet.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-932"/>
+    </children>
+  </item>
+  <item nodeId="node-932">
+    <command xml:space="preserve">touch laptop</command>
+    <result xml:space="preserve">There's only one button to tap, and it reads "Sign Up Now." You should probably read what's on the laptop first, though.&#x000A;Tap it? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-933"/>
+    </children>
+  </item>
+  <item nodeId="node-933">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-934"/>
+    </children>
+  </item>
+  <item nodeId="node-934">
+    <command xml:space="preserve">read laptop</command>
+    <result xml:space="preserve">August 10th, 2057 &#x000A;Dear friend, welcome to the future. My name is Steven Musk, founder of Elon Tech. If you are here, you know we have mastered death.  &#x000A;I'm proud to announce that today, Elon Tech will open up this technology to the public, allowing anyone to be able to extend their lives indefinitely.  Join the human evolution with me. Subscribe below.&#x000A;&#x000A;Sign Up Now&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-935"/>
+    </children>
+  </item>
+  <item nodeId="node-935">
+    <command xml:space="preserve">read</command>
+    <result xml:space="preserve">(the shredded letter)&#x000A;Just the shredded handwriting of your wife.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-936"/>
+    </children>
+  </item>
+  <item nodeId="node-936">
+    <command xml:space="preserve">read laptpo</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;What do you do this moment? 25&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-937"/>
+    </children>
+  </item>
+  <item nodeId="node-937">
+    <command xml:space="preserve">tap laptop</command>
+    <result xml:space="preserve">There's only one button to tap, and it reads "Sign Up Now." Tap it? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-938"/>
+    </children>
+  </item>
+  <item nodeId="node-938">
+    <command xml:space="preserve">y</command>
+    <result xml:space="preserve">This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. &#x000A;&#x000A;How wrong you were. Why did I click it? Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. &#x000A;This is the end. There's only one thing left for me to do here. It's already 1:02 am.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-939"/>
+    </children>
+  </item>
+  <item nodeId="node-939">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk, a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-940"/>
+    </children>
+  </item>
+  <item nodeId="node-940">
+    <command xml:space="preserve">kill self</command>
+    <result xml:space="preserve">You're getting rather tired. The bed must be nearby.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-941"/>
+    </children>
+  </item>
+  <item nodeId="node-941">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk, a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-942"/>
+    </children>
+  </item>
+  <item nodeId="node-942">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk, a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-943"/>
+    </children>
+  </item>
+  <item nodeId="node-943">
+    <command xml:space="preserve">s</command>
+    <result xml:space="preserve">Bedroom&#x000A;Your bed is perfectly made for you. Outside the window, you can see the beautiful Manhattan skyline at night like a million stars. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-944"/>
+    </children>
+  </item>
+  <item nodeId="node-944">
+    <command xml:space="preserve">x bed</command>
+    <result xml:space="preserve">Tidy and perfect; you probably could sink into it. A good place to end, you think.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-945"/>
+    </children>
+  </item>
+  <item nodeId="node-945">
+    <command xml:space="preserve">sink into bed</command>
+    <result xml:space="preserve">You fall onto the bed, as it engulfs you. &#x000A;Ah. It's soft. You could stay here forever.&#x000A;You close your eyes, crying. You miss them so much. Everyone you loved, dying one by one. Everyone dies. It's your turn. You won't wake again.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-946"/>
+    </children>
+  </item>
+  <item nodeId="node-946">
+    <command xml:space="preserve">undo</command>
+    <result xml:space="preserve">Bedroom&#x000A;[Previous turn undone.]&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-947"/>
+    </children>
+  </item>
+  <item nodeId="node-947">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-948"/>
+    </children>
+  </item>
+  <item nodeId="node-948">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-949"/>
+    </children>
+  </item>
+  <item nodeId="node-949">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-950"/>
+    </children>
+  </item>
+  <item nodeId="node-950">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-951"/>
+    </children>
+  </item>
+  <item nodeId="node-951">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-952"/>
+    </children>
+  </item>
+  <item nodeId="node-952">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-953"/>
+    </children>
+  </item>
+  <item nodeId="node-953">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-954"/>
+    </children>
+  </item>
+  <item nodeId="node-954">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-955"/>
+    </children>
+  </item>
+  <item nodeId="node-955">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-956"/>
+    </children>
+  </item>
+  <item nodeId="node-956">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-957"/>
+    </children>
+  </item>
+  <item nodeId="node-957">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-958"/>
+    </children>
+  </item>
+  <item nodeId="node-958">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-959"/>
+    </children>
+  </item>
+  <item nodeId="node-959">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-960"/>
+    </children>
+  </item>
+  <item nodeId="node-960">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-961"/>
+    </children>
+  </item>
+  <item nodeId="node-961">
+    <command xml:space="preserve">z</command>
+    <result xml:space="preserve">You wait, patiently. You look around for the bed.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-962"/>
+    </children>
+  </item>
+  <item nodeId="node-962">
+    <command xml:space="preserve">n</command>
+    <result xml:space="preserve">Living Room&#x000A;The room is filled with the objects of your life. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk, a clock, a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? 40&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-963"/>
+    </children>
+  </item>
+  <item nodeId="node-963">
+    <command xml:space="preserve">x clock</command>
+    <result xml:space="preserve">Well, time sure flies. The clock reads 7:24 am.  You think it's time.&#x000A;Your strength suddenly fades. Your time is up.  You miss them so much. Everyone you loved, dying one by one. Everyone dies. It's your turn. Why was I born?You won't wake again.&#x000A;&#x000A;&#x000A;&#x000A;    *** The End ***&#x000A;&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
@@ -7636,7 +8496,7 @@
   </item>
   <item nodeId="node-775">
     <command xml:space="preserve">help</command>
-    <result xml:space="preserve">Common IF commands: &#x000A;-E[x]amine thing e.g. "x table"&#x000A;-[L]ook e.g. "look"&#x000A;-[N]orth/[e]ast/[s]outh/[w]est e.g. "e"&#x000A;-There are other commands, so don't be scared to find them through trial and error.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <result xml:space="preserve">Common IF commands: &#x000A;-E[x]amine thing e.g. "x table"&#x000A;-[L]ook e.g. "look"&#x000A;-[N]orth/[e]ast/[s]outh/[w]est e.g. "e"&#x000A;&#x000A;There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>

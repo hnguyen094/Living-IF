@@ -21,6 +21,7 @@ You regain composure is an action applying to nothing.
 Regained composure is a truth state that varies. Regained composure is false.
 Shredded is a truth state that varies. Shredded is false.
 Viewed laptop is a truth state that varies. Viewed laptop is false.
+You die is an action applying to nothing.
 
 Table of Letter
 Line (indexed text)	EOF (truth state)
@@ -36,7 +37,7 @@ Line (indexed text)	EOF (truth state)
 Nighttime is a scene. Nighttime begins when the time of day is after sunset. Nighttime ends when the time of day is sunrise.
 A window is a kind of thing that is fixed in place. The description of a window is "Outside, Manhattan
 [if nighttime is happening]looks like a sea of fireflies, blinking[otherwise]glitters gold[end if] beneath you.
-Everything is perfect.".
+Everything is perfect. [if introspection counter is greater than 4][line break]Because you want it to end like this.".
 
 [Verbs/ synonyms]
 Helping is an action applying to nothing. Understand "help" as helping.
@@ -65,16 +66,15 @@ Every turn:
 		Let X be a random number from 5 to 30;
 		Let Y be the time of day plus x minus 1 minutes;
 		Now the time of day is Y;
-		[say "It's been [X in words] minutes. It is [time of day in words].";]
+		[say "It's been [X in words] minutes. It is [time of day in words]."; TODO: do X in clock]
 	otherwise:
 		now time changed by clock is false;
 	Now happiness is (100 * life satisfaction) / (life satisfaction + life dissatisfaction); 
 	If time of day is greater than time of death, and time of day is before 12:00 PM:
-		say "It's time..."; [TODO: change the ending statements depending on some variables]
-		end the story.
+		you die in 0 turns from now.
 
 [Rooms]
-Bedroom is a room.  The description is "Your bed is perfectly made. Outside the window, you can see
+Bedroom is a room.  The description is "Your bed is perfectly made[if introspection counter is greater than 5] for you[end if]. Outside the window, you can see
 [if nighttime is happening]the beautiful Manhattan skyline at night like a million stars[otherwise]the sun setting on the Manhattan skyline, bleeding orange onto you[end if].
 The living room lies to the north of your bedroom." [TODO Change the backdrop scenery]
 Living Room is a room. The description is "[if introspection counter < 3]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter is 3]Mostly bare, but it's beginning to remind you of something.[otherwise]The room is filled with the objects of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the south[if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom.
@@ -95,7 +95,7 @@ The letter is a thing on the desk. The description is "Your wife[’]s cursive h
 The shredded letter is a thing. The description is "This is what[']s left of your letter."
 
 [Interactions/Rules]
-Instead of helping, say "Common IF commands: [line break]-E[unicode 91]x[unicode 93]amine thing[roman type] [italic type]e.g. 'x table[roman type]'[line break]-[unicode 91]L[unicode 93]ook [italic type]e.g. 'look'[roman type][line break]-[unicode 91]N[unicode 93]orth/[unicode 91]e[unicode 93]ast/[unicode 91]s[unicode 93]outh/[unicode 91]w[unicode 93]est [italic type]e.g. 'e'[roman type][line break]-There are other commands, so don't be scared to find them through trial and error.".
+Instead of helping, say "Common IF commands: [line break]-E[unicode 91]x[unicode 93]amine thing[roman type] [italic type]e.g. 'x table[roman type]'[line break]-[unicode 91]L[unicode 93]ook [italic type]e.g. 'look'[roman type][line break]-[unicode 91]N[unicode 93]orth/[unicode 91]e[unicode 93]ast/[unicode 91]s[unicode 93]outh/[unicode 91]w[unicode 93]est [italic type]e.g. 'e'[roman type][line break][line break]There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.".
 Instead of listening, say "You hear nothing[if seen clock is true] besides the ticking of the clock[end if]."
 Before examining yourself:
 	say "You look down at yourself. You're wearing your best Sunday clothes, but it feels like wearing pajamas."; [TODO: change this to reflect your life satisfaction]
@@ -116,9 +116,9 @@ Before entering the bed:
 		otherwise if happiness > 30:
 			say "crying. You miss them so much. Everyone you loved, dying one by one. [italic type]Everyone dies.[roman type] It[']s your turn. [run paragraph on]";
 		otherwise if happiness > 0:
-			say "but only for a brief moment to imagine a large syringe of pentobarbital. You reach for it and plunged it into your heart. You close your eyes while making sure the full dose enters your bloodstream.";
+			say "but only for a brief moment to imagine a large syringe of pentobarbital. You reach for it and plunged it into your heart. You close your eyes while making sure the full dose enters your bloodstream. [run paragraph on]";
 		end the story;
-		say "You won[']t wake again.";
+		say "You won't wake again.";
 	otherwise:
 		say "[line break]You get up again, though. [italic type]There's a time and place for everything. But not now.";
 	stop the action.
@@ -134,7 +134,7 @@ Before being reminiscient: [TODO: make gendered memories or choices]
 		stop the action.
 Before looking in the Living Room:
 	if introspection counter is 1:
-		Say "You wanted this room earlier today. It reminds you of the emptiness of life, and your impending death.
+		Say "You wanted this room like this. It reminds you of the emptiness of life, and your impending death.
 					[line break]You just want to close your eyes and wait here.";
 		Increase introspection counter by 1; [should now be 2]
 		stop the action.
@@ -145,14 +145,14 @@ Before waiting:
 		Now the clock is in the Living Room;
 	otherwise:
 		say "You wait, patiently. [if introspection counter is 6]You look around for the bed.";
-	if introspection counter is 5:
+	if introspection counter is 4:
 		Now regained composure is true.
 
 Examining the clock is checking the time. Reading the clock is checking the time.
 Before checking the time:
 	Increase clock counter by 1;
 	Now time changed by clock is true;
-	Let X be a random number from 5 to 60;
+	Let X be a random number from 10 to 60;
 	Let Y be the time of day plus x minus 1 minutes;
 	Now the time of day is Y;
 	If clock counter is greater than 4:
@@ -162,7 +162,7 @@ Before checking the time:
 	If seen clock is false:
 		Increase introspection counter by 1; [should now be 3]
 		Now seen clock is true;
-		say "Your mother taught you how to read an analog clock; [italic type]how 21st century she was. [roman type]Do you remember how to read an analog clock? >[run paragraph on]";
+		say "Your mother taught you how to read an analog clock. [italic type]How 21st century she was. [roman type]Do you remember how to read an analog clock? >[run paragraph on]";
 		if player consents:
 			say "She was a good teacher, despite not being a good mother.
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
@@ -184,7 +184,7 @@ Before checking the time:
 	otherwise if introspection counter is 3:
 		say "Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman[’]s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.[line break]
 			[line break]And it was a simple decision, really. 
-			[line break]You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room.";
+			[line break]You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room. ";
 		now the desk is in the Living Room;
 		Increase introspection counter by 1; [should now be 4]
 	say the description;
@@ -208,12 +208,13 @@ Check reading:
 				break;
 	otherwise if the noun is the laptop:
 		Now viewed laptop is true;
-		say "August 10th, 2057 [line break]Dear friend, welcome to the future. My name is Steven Musk, founder of Elon Tech. If you are here, you know we have mastered death.  [line break]I[']m proud to announce that today, Elon Tech will open up this technology to the public, allowing anyone to be able to extend their lives indefinitely.  Join the human evolution with me. Subscribe below.[paragraph break][bold type]Sign Up Now".
+		say "August 10th, 2057 [line break]Dear friend, welcome to the future. My name is Steven Musk, founder of Elon Tech. If you are here, you know we have mastered death.  [line break]I[']m proud to announce that today, Elon Tech will open up this technology to the public, allowing anyone to be able to extend their lives indefinitely.  Join the human evolution with me. Subscribe below.[paragraph break][bold type]Sign Up Now";
+	otherwise if the noun is shredded letter:
+		say "Just the shredded handwriting of your wife.".
 At the time when you regain composure:
-	say "I am potatoes";
-	if introspection counter is 5 and regained composure is true:
+	if introspection counter is 4 and regained composure is true:
 		say "[italic type]Breathe,[roman type] you tell yourself. You wipe away the tears, regain control of your legs and arms, and pull yourself up. You look at the letter in your hand.";
-	increase introspection counter by 1. [should now be 6]
+	increase introspection counter by 1. [should now be 5]
 
 Tearing the letter is destroying the momento. Inserting letter into the shredder is destroying the momento. 
 Before destroying the momento:
@@ -233,7 +234,7 @@ Before destroying the momento:
 Instead of touching laptop:
 	say "There's only one button to tap, and it reads [bold type]'Sign Up Now.'[roman type] [if viewed laptop is false]You should probably read what's on the laptop first, though.[end if]Tap it? >[run paragraph on]";
 	if player consents:
-		Increase introspection counter by 1; [should now be 5]
+		Increase introspection counter by 1; [should now be 6]
 		say "This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. [line break][line break]How wrong you were. [italic type]Why did I click it? [roman type]Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. [line break][italic type]This is the end. There's only one thing left for me to do here[roman type]. It's already [if use analog is true][time of day in words][otherwise][time of day][end if].";
 		remove laptop from play;
 		remove shredder from play;
@@ -251,6 +252,19 @@ Before going to the Hallway:
 	otherwise:
 		stop the action.
 
+At the time when you die:
+	say "Your strength suddenly fades. Your time is up.  [run paragraph on]";
+	if happiness > 74:
+		say "You had been loved, you had loved. Death comes naturally, and it just happens to be your turn. [run paragraph on]";
+	otherwise if happiness > 49:
+		say "[italic type]Just a victim of circumstance, [roman type]you lie to yourself, one last time. [run paragraph on]";
+	otherwise if happiness > 24:
+		say "You miss them so much. Everyone you loved, dying one by one. [italic type]Everyone dies.[roman type] It's your turn. [italic type]Why was I born?[roman type] [run paragraph on]";
+	otherwise:
+		say "You can't feel your legs, as you collapse down on the ground. Then your sight goes. [line break]Then nothing. [run paragraph on]";
+	end the story;
+	say "You won't wake again.".
+	
 Sleeping is wanting to die. Killing yourself is wanting to die.
 Before wanting to die:
 	if introspection counter < 6:
