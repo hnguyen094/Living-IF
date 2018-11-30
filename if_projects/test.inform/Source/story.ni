@@ -245,13 +245,6 @@ Instead of touching laptop:
 		If regained composure is true, increase life satisfaction by 3;
 		if stopped reading is true, increase life dissatisfaction by 1.
 
-Before going to the Hallway:
-	say "You're not supposed to leave. Are you sure you want to?  >[run paragraph on]";
-	if player consents:
-		continue the action;
-	otherwise:
-		stop the action.
-
 At the time when you die:
 	say "Your strength suddenly fades. Your time is up.  [run paragraph on]";
 	if happiness > 74:
@@ -274,6 +267,14 @@ Before wanting to die:
 	if bed is visible and introspection counter is 6:
 		say "You just want to get in bed...";
 	stop the action;
+
+Before going to the Hallway:
+	say "You're not supposed to leave. Are you sure you want to?  >[run paragraph on]";
+	if player consents:
+		continue the action;
+	otherwise:
+		stop the action.
+
 Before going to the The Space of Reflection:
 	if introspection counter is less than 2:
 		say "It's pitch black.";
