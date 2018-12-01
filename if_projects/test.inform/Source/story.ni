@@ -96,7 +96,13 @@ The letter is a thing on the desk. The description is "Your wife[’]s cursive h
 The shredded letter is a thing. The description is "This is what[']s left of your letter."
 
 [Interactions/Rules]
-Instead of helping, say "Common IF commands: [line break]-E[unicode 91]x[unicode 93]amine thing[roman type] [italic type]e.g. 'x table[roman type]'[line break]-[unicode 91]L[unicode 93]ook [italic type]e.g. 'look'[roman type][line break]-[unicode 91]N[unicode 93]orth/[unicode 91]e[unicode 93]ast/[unicode 91]s[unicode 93]outh/[unicode 91]w[unicode 93]est [italic type]e.g. 'e'[roman type][line break][line break]There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.".
+Instead of helping, say "Common IF commands: [line break]
+-E[unicode 91]x[unicode 93]amine thing[roman type] [italic type]e.g. 'x table'[roman type] or [italic type]'examine table'[roman type][line break]
+-[unicode 91]L[unicode 93]ook [italic type]e.g. 'look'[roman type][line break]
+-[unicode 91]N[unicode 93]orth/[unicode 91]e[unicode 93]ast/[unicode 91]s[unicode 93]outh/[unicode 91]w[unicode 93]est [italic type]e.g. 'e'[roman type][line break]
+[if introspection counter > 0]-[unicode 91]Z[unicode 93]/wait[line break][end if]
+[line break]There are other commands. Don't be afraid to try. Read carefully!
+There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.".
 Instead of listening, say "You hear nothing[if seen clock is true] besides the ticking of the clock[end if]."
 Before examining yourself:
 	say "You look down at yourself. You're wearing your best Sunday clothes, but it feels like wearing pajamas."; [TODO: change this to reflect your life satisfaction]
@@ -163,7 +169,7 @@ Before checking the time:
 	If seen clock is false:
 		Increase introspection counter by 1; [should now be 3]
 		Now seen clock is true;
-		say "Your mother taught you how to read an analog clock. [line break]How 21st century she was. [line break]Do you remember how to read an analog clock? >[run paragraph on]";
+		say "Your mother taught you how to read an analog clock. [line break][italic type]How 21st century she was. [roman type][line break]Do you remember how to read an analog clock? >[run paragraph on]";
 		if player consents:
 			say "She was a good teacher, despite not being a good mother.
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
@@ -248,7 +254,7 @@ Instead of touching laptop:
 		if stopped reading is true and done reading is false, increase life dissatisfaction by 1.
 
 At the time when you die:
-	say "Your strength suddenly fades. You collapse. [if seen clock is true and use analog is true]It must be [time of death in words] in the morning. [otherwise if seen clock is true and use analog is false]It must be [time of death]. [endif] [run paragraph on]";
+	say "Your strength suddenly fades. You collapse. [if seen clock is true and use analog is true]It must be [time of death in words] in the morning. [otherwise if seen clock is true and use analog is false]It must be [time of death]. [end if] [run paragraph on]";
 	if happiness > 74:
 		say "You had been loved, you had loved. Death comes naturally, and it just happens to be your turn. [run paragraph on]";
 	otherwise if happiness > 49:
