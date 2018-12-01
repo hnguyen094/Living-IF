@@ -17,6 +17,7 @@ Time changed by clock is a truth state that varies. Time changed by clock is fal
 Seen clock is a truth state that varies. Seen clock is false.
 Clock counter is a number that varies. Clock counter is 0.
 Stopped reading is a truth state that varies. Stopped reading is false. 
+Done reading is a truth state that varies. Done reading is false.
 You regain composure is an action applying to nothing.
 Regained composure is a truth state that varies. Regained composure is false.
 Shredded is a truth state that varies. Shredded is false.
@@ -31,23 +32,23 @@ Line (indexed text)	EOF (truth state)
 "'Still, Be his friend and his dad. Take him to the baseball games or buy him makeup; whatever he’s into.'"	False
 "'Love him. Love him again. Love him twice, so he can feel my love, too.’[line break]The text becomes a blur as your eyes water and your hands shake.[line break][italic type]Breathe.[roman type] You don't want to keep reading."	False
 "Still, you wipe away the tears, and read on. ‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need. [line break]Then move on.'"	False
-"'I will always love you; but please, move on. For yourself, for me, for our child. [line break]Forever yours. [line break]Your wife, [line break][line break]Kate In-young Dessalegn.'[line break]"	True
+"'I will always love you; but please, move on. For yourself, for me, for our child. [line break]Forever yours. [line break]Your wife, [line break][line break]Kate.'[line break]"	True [Kate In-young Dessalegn]
 
 [Prefabs]
 Nighttime is a scene. Nighttime begins when the time of day is after sunset. Nighttime ends when the time of day is sunrise.
 A window is a kind of thing that is fixed in place. The description of a window is "Outside, Manhattan
 [if nighttime is happening]looks like a sea of fireflies, blinking[otherwise]glitters gold[end if] beneath you.
-Everything is perfect. [if introspection counter is greater than 4][line break]Because you want it to end like this.".
+Everything is perfect. [if introspection counter is greater than 5][line break]Because you want it to end like this.".
 
 [Verbs/ synonyms]
 Helping is an action applying to nothing. Understand "help" as helping.
 Understand "sink in/into [something]", "sit down on [something]", and "jump in/into/on [something]" as entering.
 [TODO: make music a real thing >:D]
 Understand "chair" as armchair.
-Understand "close eyes", "breathe", "wait here", and "close  your eyes" as waiting.
+Understand "close eyes", "breathe", "wait here", and "close my eyes" as waiting.
 Understand "look around" as looking.
 Understand "view [something]" as examining.
-Understand the command "read" as something new. Understand "read [something]" as reading. Reading is an action applying to one thing. 
+Understand the command "read" as something new. Understand "read [something]" and "read what's on [something]" as reading. Reading is an action applying to one thing. 
 Understand the command "tear" as something new. Understand "tear [something]" as tearing. Tearing is an action applying to one thing. Understand "shred [something]" as tearing.
 Understand "tap [something]" as touching.
 Understand the command "kill" as something new. Understand "kill [something]" as killing. Killing is an action applying to one thing.
@@ -77,7 +78,7 @@ Every turn:
 Bedroom is a room.  The description is "Your bed is perfectly made[if introspection counter is greater than 5] for you[end if]. Outside the window, you can see
 [if nighttime is happening]the beautiful Manhattan skyline at night like a million stars[otherwise]the sun setting on the Manhattan skyline, bleeding orange onto you[end if].
 The living room lies to the north of your bedroom." [TODO Change the backdrop scenery]
-Living Room is a room. The description is "[if introspection counter < 3]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter is 3]Mostly bare, but it's beginning to remind you of something.[otherwise]The room is filled with the objects of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the south[if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom.
+Living Room is a room. The description is "[if introspection counter < 3]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter is 3]Mostly bare, but it's beginning to remind you of something.[otherwise]Looking around again, the room is filled with the mementos of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the south[if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom.
 Hallway is a room. "It's pitch black. The light from the living room behind you isn't doing anything at all.". [It is east of the Living Room.]
 The Space of Reflection is a room. "You shouldn't be here. Your head hurts." It is east of the Hallway.
 
@@ -162,7 +163,7 @@ Before checking the time:
 	If seen clock is false:
 		Increase introspection counter by 1; [should now be 3]
 		Now seen clock is true;
-		say "Your mother taught you how to read an analog clock. [italic type]How 21st century she was. [roman type]Do you remember how to read an analog clock? >[run paragraph on]";
+		say "Your mother taught you how to read an analog clock. [line break]How 21st century she was. [line break]Do you remember how to read an analog clock? >[run paragraph on]";
 		if player consents:
 			say "She was a good teacher, despite not being a good mother.
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
@@ -183,7 +184,7 @@ Before checking the time:
 		continue the action;
 	otherwise if introspection counter is 3:
 		say "Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman[’]s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.[line break]
-			[line break]And it was a simple decision, really. 
+			[line break]And it was a simple decision, really. [line break]
 			[line break]You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room. ";
 		now the desk is in the Living Room;
 		Increase introspection counter by 1; [should now be 4]
@@ -198,6 +199,7 @@ Check reading:
 			if EOF entry is true:
 				say "Your legs give out beneath you, and you break down in tears. You just need a moment to be okay.";
 				You regain composure in 1 turn from now;
+				Now done reading is true;
 				break;
 			say " Continue?  >[run paragraph on]";
 			if player consents:
@@ -232,7 +234,7 @@ Before destroying the momento:
 		say "[italic type]How could she?[roman type] You thought to yourself back then. She didn't even fight it; she just accepted her death, and let the illness take her. You turn to the laptop, and you remembered how you found yourself here.";
 	stop the action.
 Instead of touching laptop:
-	say "There's only one button to tap, and it reads [bold type]'Sign Up Now.'[roman type] [if viewed laptop is false]You should probably read what's on the laptop first, though.[end if]Tap it? >[run paragraph on]";
+	say "There's only one button to tap, and it reads [bold type]'Sign Up Now.'[roman type] [if viewed laptop is false]You should probably read what's on the laptop first, though. Sign up anyway? [otherwise]Sign up? [end if]>[run paragraph on]";
 	if player consents:
 		Increase introspection counter by 1; [should now be 6]
 		say "This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. [line break][line break]How wrong you were. [italic type]Why did I click it? [roman type]Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. [line break][italic type]This is the end. There's only one thing left for me to do here[roman type]. It's already [if use analog is true][time of day in words][otherwise][time of day][end if].";
@@ -243,10 +245,10 @@ Instead of touching laptop:
 		Otherwise: 
 			increase life satisfaction by 2;
 		If regained composure is true, increase life satisfaction by 3;
-		if stopped reading is true, increase life dissatisfaction by 1.
+		if stopped reading is true and done reading is false, increase life dissatisfaction by 1.
 
 At the time when you die:
-	say "Your strength suddenly fades. Your time is up.  [run paragraph on]";
+	say "Your strength suddenly fades. You collapse. [if seen clock is true and use analog is true]It must be [time of death in words] in the morning. [otherwise if seen clock is true and use analog is false]It must be [time of death]. [endif] [run paragraph on]";
 	if happiness > 74:
 		say "You had been loved, you had loved. Death comes naturally, and it just happens to be your turn. [run paragraph on]";
 	otherwise if happiness > 49:
