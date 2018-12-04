@@ -9,6 +9,7 @@ Time of death is a time that varies. Time of death is 7:00 AM.
 Started is a truth state that varies. Started is false.
 Introspection counter is a number that varies. The introspection counter is 0.
 Will to leave is truth state that varies. Will to leave is false.
+Incorrect action is a number that varies. Incorrect action is 1.
 Life satisfaction is a number that varies. Life satisfaction is 1.
 Life dissatisfaction is a number that varies. Life dissatisfaction is 1. [From GDC talk by Ingold]
 Happiness is a number that varies. Happiness is 50.
@@ -32,7 +33,7 @@ Line (indexed text)	EOF (truth state)
 "'Still, Be his friend and his dad. Take him to the baseball games or buy him makeup; whatever he’s into.'"	False
 "'Love him. Love him again. Love him twice, so he can feel my love, too.’[line break]The text becomes a blur as your eyes water and your hands shake.[line break][italic type]Breathe.[roman type] You don't want to keep reading."	False
 "Still, you wipe away the tears, and read on. ‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need. [line break]Then move on.'"	False
-"'I will always love you; but please, move on. For yourself, for me, for our child. [line break]Forever yours. [line break]Your wife, [line break][line break]Kate.'[line break]"	True [Kate In-young Dessalegn]
+"'I will always love you; but please, move on. For yourself, for me, for our child. [line break]Forever yours. [line break]Your wife, [paragraph break]Kate.'[line break]"	True [Kate In-young Dessalegn]
 
 [Prefabs]
 Nighttime is a scene. Nighttime begins when the time of day is after sunset. Nighttime ends when the time of day is sunrise.
@@ -41,8 +42,8 @@ A window is a kind of thing that is fixed in place. The description of a window 
 Everything is perfect. [if introspection counter is greater than 5][line break]Because you want it to end like this.".
 
 [Verbs/ synonyms]
-Helping is an action applying to nothing. Understand "help" as helping.
-Understand "sink in/into [something]", "sit down on [something]", and "jump in/into/on [something]" as entering.
+Helping is an action applying to nothing. Understand "help" and "I don't know" as helping.
+Understand "sink in/into [something]", "sit down on [something]", "fall on/onto [something]", and "jump in/into/on [something]" as entering.
 [TODO: make music a real thing >:D]
 Understand "chair" as armchair.
 Understand "close eyes", "breathe", "wait here", and "close my eyes" as waiting.
@@ -57,10 +58,10 @@ Understand the command "kill" as something new. Understand "kill [something]" as
 When play begins:
 	now the command prompt is "What do you do this moment? >";
 	now the time of day is 6:30 PM;
-	Say "[italic type]Is this the real life?[line break]Is this just fantasy?[line break]Caught in a landslide[line break]No escape from reality...[roman type]";
-	Say "[line break][line break][unicode 91]cw: euthanasia, suicide/suicidal behavior, depression[unicode 93][line break]";
-	Say "Type 'help' for common commands often used in interactive fiction pieces like these.".
-
+	Say "[unicode 91]cw: euthanasia, suicide/suicidal behavior, depression[unicode 93][paragraph break]";
+	[Say "[unicode 91]type 'help' for common commands often used in interactive fiction pieces like these[unicode 93][paragraph break]";]
+	Say "[italic type]Is this the real life?[line break]Is this just fantasy?[line break]Caught in a landslide[line break]No escape from reality...[roman type][line break]".
+	
 [Update]
 Every turn:
 	If time changed by clock is false and seen clock is true:
@@ -71,7 +72,7 @@ Every turn:
 	otherwise:
 		now time changed by clock is false;
 	Now happiness is (100 * life satisfaction) / (life satisfaction + life dissatisfaction); 
-	If time of day is greater than time of death, and time of day is before 12:00 PM:
+	If time of day >= time of death, and time of day is before 12:00 PM:
 		you die in 0 turns from now.
 
 [Rooms]
@@ -96,13 +97,17 @@ The letter is a thing on the desk. The description is "Your wife[’]s cursive h
 The shredded letter is a thing. The description is "This is what[']s left of your letter."
 
 [Interactions/Rules]
+After printing a parser error:
+	if incorrect action > 2:
+		say "If you are new to interactive fiction, you may like to try typing 'help.'";
+	otherwise:
+		increase incorrect action by 1.
 Instead of helping, say "Common IF commands: [line break]
 -E[unicode 91]x[unicode 93]amine thing[roman type] [italic type]e.g. 'x table'[roman type] or [italic type]'examine table'[roman type][line break]
 -[unicode 91]L[unicode 93]ook [italic type]e.g. 'look'[roman type][line break]
 -[unicode 91]N[unicode 93]orth/[unicode 91]e[unicode 93]ast/[unicode 91]s[unicode 93]outh/[unicode 91]w[unicode 93]est [italic type]e.g. 'e'[roman type][line break]
 [if introspection counter > 0]-[unicode 91]Z[unicode 93]/wait[line break][end if]
-[line break]There are other commands. Don't be afraid to try. Read carefully!
-There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.".
+[line break]There are other commands. Don't be afraid to try. There are other commands, so read carefully. If all else fails, don't be scared to find them through trial and error.".
 Instead of listening, say "You hear nothing[if seen clock is true] besides the ticking of the clock[end if]."
 Before examining yourself:
 	say "You look down at yourself. You're wearing your best Sunday clothes, but it feels like wearing pajamas."; [TODO: change this to reflect your life satisfaction]
@@ -151,7 +156,7 @@ Before waiting:
 		say "[italic type]Breathe,[roman type] you tell yourself. In the silence, the clock ticks.";
 		Now the clock is in the Living Room;
 	otherwise:
-		say "You wait, patiently. [if introspection counter is 6]You look around for the bed.";
+		say "You inhale. Then exhale. [line break]You wait, patiently. [if introspection counter is 6]You look around for the bed.";
 	if introspection counter is 4:
 		Now regained composure is true.
 
@@ -161,6 +166,8 @@ Before checking the time:
 	Now time changed by clock is true;
 	Let X be a random number from 10 to 60;
 	Let Y be the time of day plus x minus 1 minutes;
+	If Y > time of death and Y < 11:59 am:
+		Let Y be the time of death;
 	Now the time of day is Y;
 	If clock counter is greater than 4:
 		say "Life is composed of moments, unmeasurable by any clock.";
@@ -173,7 +180,7 @@ Before checking the time:
 		if player consents:
 			say "She was a good teacher, despite not being a good mother.
 				[line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
-				[line break][line break]You miss her.[line break][line break]";
+				[paragraph break]You miss her.[paragraph break]";
 			Now use analog is true;
 			Increase life satisfaction by 1;
 		otherwise:
@@ -236,14 +243,14 @@ Before destroying the momento:
 		Move the shredded letter to the shredder;
 		Now the description of the shredder is "You turn towards the shredder, and is reminded that it had already destroyed your letter.";
 		say "Feeling betrayed, you [if use analog is true]shove[otherwise]put[end if] the [noun] into the shredder. 
-			[line break]'Bbbbbbbbbshhhhhhzzzzzzzzzzzzzzzzzzzz,' the shredder hummed.[line break][line break]The [noun] is now completely destroyed, just like it was before, when you first read it years ago.";
+			[line break]'Bbbbbbbbbshhhhhhzzzzzzzzzzzzzzzzzzzz,' the shredder hummed.[paragraph break]The [noun] is now completely destroyed, just like it was before, when you first read it years ago.";
 		say "[italic type]How could she?[roman type] You thought to yourself back then. She didn't even fight it; she just accepted her death, and let the illness take her. You turn to the laptop, and you remembered how you found yourself here.";
 	stop the action.
 Instead of touching laptop:
 	say "There's only one button to tap, and it reads [bold type]'Sign Up Now.'[roman type] [if viewed laptop is false]You should probably read what's on the laptop first, though. Sign up anyway? [otherwise]Sign up? [end if]>[run paragraph on]";
 	if player consents:
 		Increase introspection counter by 1; [should now be 6]
-		say "This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. [line break][line break]How wrong you were. [italic type]Why did I click it? [roman type]Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. [line break][italic type]This is the end. There's only one thing left for me to do here[roman type]. It's already [if use analog is true][time of day in words][otherwise][time of day][end if].";
+		say "This is what you wanted. To live forever, so you can love forever, and never leave anyone behind. Your child, your grandchild, and your great-grandchild will never have to know loss. [paragraph break]How wrong you were. [italic type]Why did I click it? [roman type]Here you are now, waiting out the last few moments of life. Intentionally waiting for someone to put you down, like a dog. You chuckle in the silence as tears stream down your face. [line break][italic type]This is the end. There's only one thing left for me to do here[roman type]. It's already [if use analog is true][time of day in words][otherwise][time of day][end if].";
 		remove laptop from play;
 		remove shredder from play;
 		if shredded is true: 
