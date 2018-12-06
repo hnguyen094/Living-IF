@@ -12216,7 +12216,7 @@ Array ActionHappened --> 0 0 0 0 0 0;
 ! When play begins:
 [ R_799 ;
     if (debug_rules) DB_Rule(R_799, 799);
-    ! [2: now the command prompt is ~What do you do this moment? x >~]
+    ! [2: now the command prompt is ~What do you do this moment? >~]
     BlkValueCopy((Global_Vars-->1), TX_L_59);
     ! [3: now the time of day is 6:30 pm]
     the_time = 1110;
@@ -50980,7 +50980,7 @@ Constant TX_PS_54 = "RESTORE a saved game";
 Constant TX_PS_43 = "Space of Reflection";
 Constant TX_PS_2 = "The Clock Ticks for You";
 Constant TX_PS_57 = "UNDO the last command";
-Constant TX_PS_59 = "What do you do this moment? x >";
+Constant TX_PS_59 = "What do you do this moment? >";
 Array TX_L_59 --> CONSTANT_PACKED_TEXT_STORAGE TX_PS_59;
 Constant TX_PS_44 = "You shouldn't be here. Your head hurts.";
 Constant TX_PS_60 = "You turn towards the shredder, and is reminded that it had already destroyed your letter.";

@@ -58,7 +58,7 @@ Understand the command "hint" as something new. Understand "make it simple" as h
 Understand "die" as sleeping.
 [Start]
 When play begins:
-	now the command prompt is "What do you do this moment? x >";
+	now the command prompt is "What do you do this moment? >";
 	now the time of day is 6:30 PM;
 	Say "[unicode 91]cw: euthanasia, suicide/suicidal behavior, depression[unicode 93][paragraph break]";
 	[Say "[unicode 91]type 'help' for common commands often used in interactive fiction pieces like these[unicode 93][paragraph break]";]
