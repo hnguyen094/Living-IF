@@ -1,6 +1,6 @@
 ﻿You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. [line break] You open your eyes and turn towards your room, wanting to look around.
 [looking around]
-You wanted this room earlier. It reminds you of the emptiness of life. Well, and your impending death.[line break]You just want to wait here. 
+You wanted this room earlier. It reminds you of the emptiness of life. Well, and your impending death.[line break]You just want to wait here.
  [z]
 [italic type]Breathe,[roman type] you tell yourself. In the silence, the clock ticks.
 
@@ -8,18 +8,18 @@ You wanted this room earlier. It reminds you of the emptiness of life. Well, and
 [x clock]
 Your mother taught you how to read an analog clock; how 20th century she was. Do you remember how to read an analog clock?
 [if player consents, mother is only disappointing]
-She was a good teacher, despite not being a good mother. 
+She was a good teacher, despite not being a good mother.
 [line break]You take a deep breath. Still, you miss her. Her laughter was contagious. Her love, although conditional, was abundant. She wouldn’t want to see you like this.
 [line break]You miss her.
 The clock reads [the time of day in words].
 [otherwise, mother is maddening]
 The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that.
 [line break][italic type]Breathe.[roman type][line break]
-Her birth date is July 29th, 2003. 
+Her birth date is July 29th, 2003.
 [line break][italic type]Breathe.[roman type][line break]
 She’s a Leo. Your grandfather was also a Leo. You miss him.
 [line break][italic type]Breathe.[roman type][line break]
-The clock reads [the time of day]. 
+The clock reads [the time of day].
 
 You have [Time of death – the time of day] left.
 
@@ -29,10 +29,10 @@ It’s been x minutes since you last checked. You have [time of death – the ti
 
 
 [X clock]
-It’s been x minutes since you last checked. You have [time of death – the time of day] left. 
+It’s been x minutes since you last checked. You have [time of death – the time of day] left.
 (I want the player to constantly remind themselves of their mortality and makes the flashback make more sense.)
 
-Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman’s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones. 
+Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman’s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.
 
 And it was a simple decision, really.
 You can remember the exact layout of your desk, years ago. You turn around and see it just the way it was that day, in the corner of the room.
@@ -43,43 +43,54 @@ There’s a desk in the room (among all the previous things)
 (on the desk, there’s a laptop at the webpage to subscribe, as well as a letter from your wife. There’s also a shredder and an envelope.)
 
 [x letter]
-Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read. 
+Wet blotches sporadically covered the piece of paper, making some of your wife’s cursive handwriting difficult to read.
 
 [read letter]
 ‘Babe, I love you.’
-[Continue reading? y/n] [loop]  
+[Continue reading? y/n] [loop]
 The words ‘I’m sorry.’ was scribbled out, but you can still see it underneath the ink marks. ‘Thank you. For everything. For all the loving moments.’
 ‘I’m sorry that I must leave you early. I’m sorry I must leave our child motherless early.
 [if lovedMom] But I know he will grow up to be amazing regardless; you certainly did.
 [otherwise] I can only hope I was a better mother to him, than yours was to you.
-Still, Be his friend and his dad. 
-Give him the talk when he’s older. 
+Still, Be his friend and his dad.
+Give him the talk when he’s older.
 Take him to the baseball games or buy him makeup; whatever he’s into.
 Love him. Love him again. Love him twice, so he can feel my love, too.’
 The text becomes a blur, but you blink a few times. More blotches appear on the letter.
-‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need. 
+‘Lastly, mourn for me. Cry, punch, scream, write; whatever you need.
 Then move on.
 I will always love you; but please, move on. For yourself, for me, for our child.’
 
 ‘Forever yours,
-Kate In-young Dessalegn’ 
-[italic type]  Breathe.[roman type] 
-[italic type]  Breathe.[roman type] 
+Kate In-young Dessalegn’
+[italic type]  Breathe.[roman type]
+[italic type]  Breathe.[roman type]
 You hold the letter in your hand and can remember what you did next.
 1) signed up on the computer (a neutral choice)
 2) shred the letter or envelope(hate wife, hate life)
 3) put it back in its envelope (cherish & love life)
 
-
-
-
 One ‘Subscribe’ button, two annual checkups; Three deaths
 
-and you were now a part of the new human evolution. 
+and you were now a part of the new human evolution.
 Two
 
 You were one of those people. [line break][line break]Were.
 
-
 Life satisfaction + Life dissatisfaction)
 
+Triggering the will to leave:
+examine framed photo on the wall in Bedroom
+interacting with the ghosts of their bodies, one by one, who appears in the Room
+-mom
+-grandfather
+-the unknown dad
+-- once you realize there's more to the first people who loved you, and truly believe it, you can leave
+-- therefore, your experience out is simply a journey of finding those reasons; at least, at first
+-here is a good place to explain that you can imagine whatever you want because They wanted to pass in peace, in the most comfortable place
+
+then, you get to leave
+the thing bugs, and you start _feeling_: fear, anger, sadness, joy, disgust, surprise, trust, anticipation (doesn't have to be all)
+- explain how you weren't suppose to feel; they had numbed you down so you can pass in peace. Why are you feeling now?
+You start remembering why you want to live forever:
+https://www.quora.com/Why-do-people-want-to-live-forever
