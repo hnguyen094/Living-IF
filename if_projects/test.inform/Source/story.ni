@@ -25,6 +25,7 @@ Shredded is a truth state that varies. Shredded is false.
 Viewed laptop is a truth state that varies. Viewed laptop is false.
 You die is an action applying to nothing.
 Easy mode is a truth state that varies. Easy mode is false. [just bold the verbs]
+Photo count is a number that varies. Photo count is 0.
 
 Table of Love Letter
 Line (indexed text)	EOF (truth state)
@@ -91,13 +92,13 @@ A bed is a thing in Bedroom. It is an enterable supporter and fixed in place. Th
 The bedroom window is a window in Bedroom. [Enables photoframe]
 The living room window is a window in Living Room. [Enables photoframe]
 The armchair is a thing in the Living Room. The armchair is an enterable supporter and fixed in place. The description is "It's a perfect replica of the same one your grandfather owned. It even [if easy mode is true][bold type][end if]smells[if easy mode is true][roman type][end if] of old cigarette smoke."
-The clock is a thing and fixed in place. The description is "Well, time sure flies. The [if easy mode is true][bold type][end if]clock[if easy mode is true][roman type][end if] reads [if use analog is true][time of day in words][otherwise][time of day][end if].". 
+The clock is a thing and fixed in place. The description is "Well, time sure flies. The [if easy mode is true][bold type][end if]clock[if easy mode is true][roman type][end if] reads [if use analog is true][time of day in words][otherwise][time of day][end if]. [if photo count > 0]Thank you, mom. [end if]". 
 The desk is a supporter and fixed in place. The description is "A clear, wooden desk, popular back in the 2030[']s.  You picked it out when you first got your own place. It brings back memories."
 The shredder is a container on the desk and fixed in place. The description is "Despite its small size, this shredder will [if easy mode is true][bold type][end if]blend[if easy mode is true][roman type][end if] almost anything into dust."
 The laptop is a thing on the desk and fixed in place.  The description is "An old laptop. It's a perfect replica of your university's Surface Air, and you're reminded how old you are when you realized it doesn't support air touch; instead, you can only [if easy mode is true][bold type][end if]tap[if easy mode is true][roman type][end if] it."
 The letter is a thing on the desk. The description is "Your wife[’]s cursive handwriting is difficult to read. Despite having read it a million times, you want to [if easy mode is true][bold type][end if]read[if easy mode is true][roman type][end if] it again[if done reading is true] and again[end if].".
 The shredded letter is a thing. The description is "This is what[']s left of your letter.".
-The photo album is a thing. The photo album is nowhere.
+The photo album is a thing. The photo album is nowhere. The description is "Family. That's how you ended here. It only feels right that you should think of them before you go. ".
 
 [Interactions/Rules]
 After printing a parser error:
@@ -105,6 +106,42 @@ After printing a parser error:
 		say "If you are new to interactive fiction, you may like to try typing 'help.'";
 	otherwise:
 		increase incorrect action by 1.
+
+After examining the photo album:
+	if photo count is less than 3:
+		say "Open the album? >";
+	if photo count is 0 and player consents:
+		say "You open the album to a random page.";
+		say "You see a picture of your mom, pregnant with you. She's candidly smiling, so brightly. You trace the crinkles on her face and the scars on her forarm. [line break][if use analog is true]The imperfections didn't take away from who she was. She wouldn't be mom without them.[otherwise]It seems like she, too, was just as unsure of life as you are now.[end if]You look up, and there she is. Your mom, standing in the room. You know it's just a figment of your imagination, manifested through the technology. [italic type]Why, mom? Why?[roman type], you want to ask. [line break]";
+		say "Do you tell her you [if use analog is true]love[otherwise]hate[end if] her? >";
+		if use analog is true and player consents:
+			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] illuminates her smile. 'I'm sorry I passed so early.'";
+			increase life satisfaction by 1;
+		otherwise if player consents:
+			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] casts shadows over her saddened face. 'Apologies aren't enough.'";
+			Increase life dissatisfaction by 1;
+		say "She's the reason you wanted to live forever. You wanted love to be forever. She moves closer, and holds your hand.[line break]'You know what they say. Something about flowers are fleetingly beautiful; it blooms for just for a moment, but that's why it will be more beautiful than any immortal one.'"; [TODO: this is honestly awful wording]
+		say "Continue holding her hand? >";
+		if player consents:
+			say "You hold on tight, as if you were still five and you were crossing the street with her. [line break]'I love you, mom. I didn't say it enough. [line break]I love you.'";
+		otherwise:
+			say "You know. [italic type]I know.[roman type] You look into her eyes. Your sight's blurring a little.[line break]You let go. [line break][if use analog is true]'Thank you.'[otherwise]'I forgive you.'[end if]";
+		say "She left last time, when you were young. The [if nighttime is happening]stars reflected through her [end if]tears rolls down her crinkled cheeks. [italic type]Breathe,[roman type] you tell yourself. With your fists clenched, eyes shut tight, head tilted up to heaven, you turn away."; [great place to play music]
+		increase life satisfaction by 1;
+		increase photo count by 1;
+	otherwise if photo count is 1 and player consents:
+		say "You open the album to a different page.";
+		say "There's a picture of your grandpa, holding grandma up in his arms. He must have been only around 40.";
+		increase photo count by 1;
+	otherwise if photo count is 2 and player consents::
+		say "You turn to the last page.";
+		say "Your kids, rolling around the the sand. They're not even looking at the camera.";
+		increase photo count by 1;
+	otherwise:
+		say "You close it. You've thought about them enough today.";
+		stop the action.
+
+
 Before hinting: 
 	say "The bold text are now usually your clue; it'll often be a [bold type]verb[roman type] or a [bold type]noun[roman type].";
 	Now easy mode is true.
@@ -209,6 +246,7 @@ Before checking the time:
 			say "With your mother in your mind and heart, you're reminded that you have until [time of death in words] tomorrow morning, when you, too, will pass and join her.";
 		otherwise:
 			say "With your grandfather in your mind and heart, you're reminded that you have until [time of death] tomorrow, when you, too, will pass and join him.";
+		now the photo album is in the Bedroom;
 		continue the action;
 	otherwise if introspection counter is 3:
 		say "Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman[’]s explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.[line break]

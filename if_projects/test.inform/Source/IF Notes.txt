@@ -99,18 +99,30 @@ You open the album to a random page. [or] You flip to a different page. [or] You
 [n] You close it. You've thought about them enough today.
 
 a) 
+
 You see a picture of your mom, pregnant with you. She's candidly smiling, so brightly. 
 You trace the crinkles on her face and the scars on her forarm.
 [if use analog is true] The imperfections didn't take away from who she was. She wouldn't be mom without them.
 [otherwise] It seems like she, too, was just as unsure of life as you are now.[end if]
 You look up, and there she is. Your mom, standing in the room. You know it's just a figment of your imagination.
-'Mom?'
-'Hi honey.' She looks down at her tummy, jokingly. 'Shouldn't you be in here? Oh, they grow up so fast.'
-Your chest hurts, seeing her again.
-'Why, mom? Why?' You ask. You know, though. [line break]
-[if use analog is true] She smiles, illuminated by the starlight. 'I love you.' She holds your hand.
-[otherwise] Mom looks down, avoiding eye contact. 'I...' She looks up, moves across the star-lit room to hold your hand.[end if]
-'I was young'
+[italic type]Why, mom? Why?[roman type] You ask. [line break]
+Do you tell her you [if use analog is true]love[otherwise]hate[end if] her? >[line break]
+[if use analog is true and player consents] The [if nighttime is happening]starlight[otherwise]sunlight[end if] illuminates her smile. 'I'm sorry I passed so early.'
+[otherwise if player consents] The [if nighttime is happening]starlight[otherwise]sunlight[end if] casts shadows over her saddened face. 'Apologies aren't enough.'
+[otherwise]
+[end if]
+She's the reason you wanted to live forever. You wanted love to be forever. She moves closer, and holds your hand.
+'You know what they say; ' [something about flower, moment, fleeting, time; preferably a quote]
+Continue holding her hand? >
+[if player consent]
+You hold on tight, as if you were still five and you were crossing the street with her. 
+'I love you, mom. I didn't say it enough. [line break]I love you.'
+[otherwise]
+You know. [italic type]I know.[roman type] You look into her eyes. Your sight's blurring a little.[line break]You let go.
+[if use analog is true] 'Thank you.'
+[otherwise]'I forgive you.'[end if]
+
+She left last time, when you were young. With your fists clenched, eyes shut tight, head tilted up to heaven, you turn away. [great place to play music]
 
 
 b)
