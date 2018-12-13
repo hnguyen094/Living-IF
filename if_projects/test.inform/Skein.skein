@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-135"/>
+  <activeNode nodeId="node-146"/>
   <item nodeId="node-1">
     <command xml:space="preserve">test</command>
-    <result xml:space="preserve">[cw: euthanasia, suicide/suicidal behavior, depression]&#x000A;&#x000A;Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;The Clock Ticks for You&#x000A;An Interactive Fiction by Hung Nguyen&#x000A;Release 1 / Serial number 181205 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">[cw: euthanasia, suicide/suicidal behavior, depression]&#x000A;&#x000A;Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;The Clock Ticks for You&#x000A;An Interactive Fiction by Hung Nguyen&#x000A;Release 1 / Serial number 181213 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed, a bedroom window and mom here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve">[cw: euthanasia, suicide/suicidal behavior, depression]&#x000A;&#x000A;Is this the real life?&#x000A;Is this just fantasy?&#x000A;Caught in a landslide&#x000A;No escape from reality...&#x000A;&#x000A;The Clock Ticks for You&#x000A;An Interactive Fiction by Hung Nguyen&#x000A;Release 1 / Serial number 181205 / Inform 7 build 6F95 (I6/v6.31 lib 6/12N) SD&#x000A;&#x000A;You mentally turn off Queen from playing in your head. &#x000A;It's old and overplayed, you thought to yourself and get out of bed.&#x000A;&#x000A;Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed and a bedroom window here.&#x000A;&#x000A;What do you do this moment? &gt;</commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-2"/>
       <child nodeId="node-4"/>
       <child nodeId="node-101"/>
       <child nodeId="node-102"/>
+      <child nodeId="node-136"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -897,9 +898,9 @@
   </item>
   <item nodeId="node-102">
     <command xml:space="preserve">n</command>
-    <result xml:space="preserve">Living Room&#x000A;Mostly bare, just the way you wanted it yesterday. An armchair sits dead center, facing the window.  The bedroom lies to the south.&#x000A;&#x000A;You can see a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Living Room&#x000A;Mostly bare, just the way you wanted it yesterday. An armchair sits dead center, facing the window.  The bedroom lies to the south.&#x000A;&#x000A;You can see a living room window and an armchair here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-103"/>
       <child nodeId="node-122"/>
@@ -1073,27 +1074,27 @@
   </item>
   <item nodeId="node-122">
     <command xml:space="preserve">sit on chair</command>
-    <result xml:space="preserve">You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. &#x000A;You open your eyes and turn towards your room, wanting to look around.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">You touch the fabric of the chair, and memories of being with your family flood back to you. You sit down. The smoky smell reminds you of your grandfather, and the way he always smiled at you when you walked by. You lean back and close your eyes to take in a deep breath. Your grandfather passed when you were fifteen. It'll be your turn soon. &#x000A;You open your eyes and turn towards your room, wanting to look around.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-123"/>
     </children>
   </item>
   <item nodeId="node-123">
     <command xml:space="preserve">l</command>
-    <result xml:space="preserve">You wanted this room like this. It reminds you of the emptiness of life, and your impending death. &#x000A;You just want to close your eyes and wait here.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">You wanted this room like this. It reminds you of the emptiness of life, and your impending death. &#x000A;You just want to close your eyes and wait here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-124"/>
     </children>
   </item>
   <item nodeId="node-124">
     <command xml:space="preserve">z</command>
-    <result xml:space="preserve">Breathe, you tell yourself. In the silence, the clock ticks.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Breathe, you tell yourself. In the silence, the clock ticks.&#x000A;&#x000A;Time passes.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-125"/>
     </children>
@@ -1109,7 +1110,7 @@
   </item>
   <item nodeId="node-126">
     <command xml:space="preserve">n</command>
-    <result xml:space="preserve">The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that. &#x000A;    Breathe.&#x000A;Her birth date is July 29th, 2003. &#x000A;    Breathe.&#x000A;She's a Leo. Your grandfather was also a Leo. You miss him. &#x000A;    Breathe.&#x000A;You regain some composure, as your mind wandered back to him.&#x000A;With your grandfather in your mind and heart, you're reminded that you have until 7:00 am tomorrow, when you, too, will pass and join him.&#x000A;&#x000A;Well, time sure flies. The clock reads 7:05 pm.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">The memory of your mother makes your blood boil; she was never there for you. She was a terrible teacher, and an even worse mother. She stopped making dinner for the family when you were 6. She stopped picking you up from school when you were 9. She forgot your 13th birthday, and every birthday after that. &#x000A;    Breathe.&#x000A;Her birth date is July 29th, 2003. &#x000A;    Breathe.&#x000A;She's a Leo. Your grandfather was also a Leo. You miss him. &#x000A;    Breathe.&#x000A;You regain some composure, as your mind wandered back to him.&#x000A;With your grandfather in your mind and heart, you're reminded that you have until 7:00 am tomorrow, when you, too, will pass and join him.&#x000A;&#x000A;Well, time sure flies. The clock reads 7:25 pm.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -1118,7 +1119,7 @@
   </item>
   <item nodeId="node-127">
     <command xml:space="preserve">x clock</command>
-    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A; &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room. Well, time sure flies. The clock reads 7:41 pm.&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Ah, time. For thousands of years, humankind worried about their limited lifespan. But no more. In the last century, the advancements in medicine have allowed wealthy people to streamline the ability to live forever. The layman's explanation? The cells are told to stop aging, and failed organs are replaced with artificial ones.&#x000A; &#x000A;And it was a simple decision, really. &#x000A; &#x000A;You can remember the exact layout of your desk, years ago, when you made the decision. You turn around and see it just the way it was that day, in the corner of the room. Well, time sure flies. The clock reads 7:55 pm.&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
@@ -1136,61 +1137,157 @@
   </item>
   <item nodeId="node-129">
     <command xml:space="preserve">n</command>
-    <result xml:space="preserve">What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-130"/>
     </children>
   </item>
   <item nodeId="node-130">
     <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Living Room (on the armchair)&#x000A;Mostly bare, but it's beginning to remind you of something. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock and a living room window here.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Living Room (on the armchair)&#x000A;Mostly bare, but it's beginning to remind you of something. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock and a living room window here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-131"/>
     </children>
   </item>
   <item nodeId="node-131">
     <command xml:space="preserve">help</command>
-    <result xml:space="preserve">Common IF commands: &#x000A; -To e[x]amine something that you can see e.g. "x table" or "examine table"&#x000A; -To [l]ook around the room e.g. "look"&#x000A; -To move in a cardinal direction: [N]orth/[e]ast/[s]outh/[w]est e.g. "Move east" or simply "e"&#x000A; -To interact with objects: e.g. "read letter", "sit down on chair", "get in bed" &#x000A; -[Z]/wait&#x000A;  &#x000A;There are other commands. Don't be afraid to try. There are other commands, so read carefully. If all else fails, type "make it simple."&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Common IF commands: &#x000A; -To e[x]amine something that you can see e.g. "x table" or "examine table"&#x000A; -To [l]ook around the room e.g. "look"&#x000A; -To move in a cardinal direction: [N]orth/[e]ast/[s]outh/[w]est e.g. "Move east" or simply "e"&#x000A; -To interact with objects: e.g. "read letter", "sit down on chair", "get in bed" &#x000A; -[Z]/wait&#x000A;  &#x000A;There are other commands. Don't be afraid to try. Read carefully. If all else fails, type "make it simple."&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-132"/>
     </children>
   </item>
   <item nodeId="node-132">
     <command xml:space="preserve">make it simple</command>
-    <result xml:space="preserve">The bold text are now usually your clue; it'll often be a verb or a noun.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">The bold text are now usually your clue; it'll often be a verb or a noun.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-133"/>
     </children>
   </item>
   <item nodeId="node-133">
     <command xml:space="preserve">l</command>
-    <result xml:space="preserve">Living Room (on the armchair)&#x000A;Mostly bare, but it's beginning to remind you of something. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock and a living room window here.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Living Room (on the armchair)&#x000A;Mostly bare, but it's beginning to remind you of something. An armchair sits dead center, facing the window. The clock ticks, signaling the passage of time. The bedroom lies to the south.&#x000A;&#x000A;You can see a desk (on which are a shredder (empty), a laptop and a letter), a clock and a living room window here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-134"/>
     </children>
   </item>
   <item nodeId="node-134">
     <command xml:space="preserve">x window</command>
-    <result xml:space="preserve">Outside, Manhattan looks like a sea of fireflies, blinking beneath you. Everything is perfect. &#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Outside, Manhattan looks like a sea of fireflies, blinking beneath you. Everything is perfect. &#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
+    <changed>YES</changed>
     <children>
       <child nodeId="node-135"/>
     </children>
   </item>
   <item nodeId="node-135">
     <command xml:space="preserve">x letter</command>
-    <result xml:space="preserve">Your wife's cursive handwriting is difficult to read. Despite having read it a million times, you want to read it again.&#x000A;&#x000A;What do you do this moment? x &gt;</result>
+    <result xml:space="preserve">Your wife's cursive handwriting is difficult to read. Despite having read it a million times, you want to read it again.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+  </item>
+  <item nodeId="node-136">
+    <command xml:space="preserve">l</command>
+    <result xml:space="preserve">Bedroom&#x000A;Your bed is perfectly made. Outside the window, you can see the sun setting on the Manhattan skyline, bleeding orange onto you. The living room lies to the north of your bedroom.&#x000A;&#x000A;You can see a bed, a bedroom window and mom here.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>YES</changed>
+    <children>
+      <child nodeId="node-137"/>
+    </children>
+  </item>
+  <item nodeId="node-137">
+    <command xml:space="preserve">mom</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-138"/>
+    </children>
+  </item>
+  <item nodeId="node-138">
+    <command xml:space="preserve">x mom</command>
+    <result xml:space="preserve">Mom looks just the way you remember it.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-139"/>
+    </children>
+  </item>
+  <item nodeId="node-139">
+    <command xml:space="preserve">is mom a woman</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-140"/>
+    </children>
+  </item>
+  <item nodeId="node-140">
+    <command xml:space="preserve">mom</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-141"/>
+    </children>
+  </item>
+  <item nodeId="node-141">
+    <command xml:space="preserve">talk to mom</command>
+    <result xml:space="preserve">That's not a verb I recognise.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-142"/>
+    </children>
+  </item>
+  <item nodeId="node-142">
+    <command xml:space="preserve">ask mom</command>
+    <result xml:space="preserve">What do you want to ask mom for?&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-143"/>
+    </children>
+  </item>
+  <item nodeId="node-143">
+    <command xml:space="preserve">ice cream</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-144"/>
+    </children>
+  </item>
+  <item nodeId="node-144">
+    <command xml:space="preserve">tell mom</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-145"/>
+    </children>
+  </item>
+  <item nodeId="node-145">
+    <command xml:space="preserve">tell mom i love you</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-146"/>
+    </children>
+  </item>
+  <item nodeId="node-146">
+    <command xml:space="preserve">tell mom 'i love you'</command>
+    <result xml:space="preserve">I didn't understand that sentence.&#x000A;If you are new to interactive fiction, you may like to try typing "help."&#x000A;&#x000A;What do you do this moment? &gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>

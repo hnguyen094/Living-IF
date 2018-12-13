@@ -82,12 +82,40 @@ Life satisfaction + Life dissatisfaction)
 Triggering the will to leave:
 examine framed photo on the wall in Bedroom
 interacting with the ghosts of their bodies, one by one, who appears in the Room
--mom
--grandfather
--the unknown dad
+-mom: the one who loved/didn't love you; accepting this is closure that it didn't matter
+-grandfather: the first death of the family: accepting this is peace with death
+-the kids; this is wanting life, to change, to atone; you have unfinished business, but extending life isn't necessary
 -- once you realize there's more to the first people who loved you, and truly believe it, you can leave
 -- therefore, your experience out is simply a journey of finding those reasons; at least, at first
 -here is a good place to explain that you can imagine whatever you want because They wanted to pass in peace, in the most comfortable place
+-- you answer a question from each of them in order to continue; your choice changes whether/how you want to leave
+
+[in bedroom]
+[x photo album]
+Family. That's how you ended here. It only feels right that you should think of them before you go. 
+Open the album? > (y/n)
+[y]
+You open the album to a random page. [or] You flip to a different page. [or] You turn to the last page.
+[n] You close it. You've thought about them enough today.
+
+a) 
+You see a picture of your mom, pregnant with you. She's candidly smiling, so brightly. 
+You trace the crinkles on her face and the scars on her forarm.
+[if use analog is true] The imperfections didn't take away from who she was. She wouldn't be mom without them.
+[otherwise] It seems like she, too, was just as unsure of life as you are now.[end if]
+You look up, and there she is. Your mom, standing in the room. You know it's just a figment of your imagination.
+'Mom?'
+'Hi honey.' She looks down at her tummy, jokingly. 'Shouldn't you be in here? Oh, they grow up so fast.'
+Your chest hurts, seeing her again.
+'Why, mom? Why?' You ask. You know, though. [line break]
+[if use analog is true] She smiles, illuminated by the starlight. 'I love you.' She holds your hand.
+[otherwise] Mom looks down, avoiding eye contact. 'I...' She looks up, moves across the star-lit room to hold your hand.[end if]
+'I was young'
+
+
+b)
+c)
+
 
 then, you get to leave
 the thing bugs, and you start _feeling_: fear, anger, sadness, joy, disgust, surprise, trust, anticipation (doesn't have to be all)

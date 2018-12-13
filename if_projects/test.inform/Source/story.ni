@@ -96,7 +96,8 @@ The desk is a supporter and fixed in place. The description is "A clear, wooden 
 The shredder is a container on the desk and fixed in place. The description is "Despite its small size, this shredder will [if easy mode is true][bold type][end if]blend[if easy mode is true][roman type][end if] almost anything into dust."
 The laptop is a thing on the desk and fixed in place.  The description is "An old laptop. It's a perfect replica of your university's Surface Air, and you're reminded how old you are when you realized it doesn't support air touch; instead, you can only [if easy mode is true][bold type][end if]tap[if easy mode is true][roman type][end if] it."
 The letter is a thing on the desk. The description is "Your wife[’]s cursive handwriting is difficult to read. Despite having read it a million times, you want to [if easy mode is true][bold type][end if]read[if easy mode is true][roman type][end if] it again[if done reading is true] and again[end if].".
-The shredded letter is a thing. The description is "This is what[']s left of your letter."
+The shredded letter is a thing. The description is "This is what[']s left of your letter.".
+The photo album is a thing. The photo album is nowhere.
 
 [Interactions/Rules]
 After printing a parser error:
