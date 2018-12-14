@@ -48,7 +48,7 @@ Helping is an action applying to nothing. Understand "help" and "I don't know" a
 Understand "sink in/into [something]", "sit down on [something]", "fall on/onto [something]", and "jump in/into/on [something]" as entering.
 [TODO: make music a real thing >:D]
 Understand "chair" as armchair.
-Understand "close eyes", "breathe", "wait here", "move on", and "close my eyes" as waiting.
+Understand "close eyes", "breathe", "wait here", "move on", and "close my/your eyes" as waiting.
 Understand "look around" as looking.
 Understand "view [something]" as examining.
 Understand the command "read" as something new. Understand "read [something]" and "read what's on [something]" as reading. Reading is an action applying to one thing. 
@@ -81,7 +81,8 @@ Every turn:
 [Rooms]
 Bedroom is a room.  The description is "Your bed is perfectly made[if introspection counter is greater than 4] for you[end if]. Outside the window, you can see
 [if nighttime is happening]the beautiful Manhattan skyline at night like a million stars[otherwise]the sun setting on the Manhattan skyline, bleeding orange onto you[end if].
-The living room lies to the [if easy mode is true][bold type][end if]north[if easy mode is true][roman type][end if] of your bedroom." [TODO Change the backdrop scenery]
+[if photo count is 1]You can feel your mom's presence, but it feels empty.[otherwise if photo count is 2]Everything feels right. The bed invites you.[otherwise if photo count is 3]You don't want to be here. It's not the end for you yet.[end if]
+The living room lies to the [if easy mode is true][bold type][end if]north[if easy mode is true][roman type][end if] of your bedroom. ". [TODO Change the backdrop scenery]
 Living Room is a room. The description is "[if introspection counter < 3]Mostly bare, just the way you wanted it yesterday.[otherwise if introspection counter < 5]Mostly bare, but it's beginning to remind you of something.[otherwise]Looking around again, the room is filled with the mementos of your life.[end if] An armchair sits dead center, facing the window. [if seen clock is true]The clock ticks, signaling the passage of time.[end if] The bedroom lies to the [if easy mode is true][bold type][end if]south[if easy mode is true][roman type][end if][if will to leave is true], and a door lies to the east[end if]." It is north of the Bedroom.
 Hallway is a room. "It's pitch black. The light from the living room behind you isn't doing anything at all.". [It is east of the Living Room.]
 The Space of Reflection is a room. "You shouldn't be here. Your head hurts." It is east of the Hallway.
@@ -112,20 +113,21 @@ After examining the photo album:
 		say "Open the album? >";
 	if photo count is 0 and player consents:
 		say "You open the album to a random page.";
-		say "You see a picture of your mom, pregnant with you. She's candidly smiling, so brightly. You trace the crinkles on her face and the scars on her forarm. [line break][if use analog is true]The imperfections didn't take away from who she was. She wouldn't be mom without them.[otherwise]It seems like she, too, was just as unsure of life as you are now.[end if]You look up, and there she is. Your mom, standing in the room. You know it's just a figment of your imagination, manifested through the technology. [italic type]Why, mom? Why?[roman type], you want to ask. [line break]";
+		say "You see a picture of your mom, pregnant with you. She's candidly smiling, so brightly. You trace the crinkles on her face and the scars on her forarm. [line break][if use analog is true]The imperfections didn't take away from who she was. She wouldn't be mom without them.[otherwise]It seems like she, too, was just as unsure of life as you are now.[end if]You look up, and there she is. Your mom, standing in the room. You know it's just a figment of your imagination, manifested through the technology. [italic type]Why, mom? Why?[roman type][line break]";
 		say "Do you tell her you [if use analog is true]love[otherwise]hate[end if] her? >";
 		if use analog is true and player consents:
-			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] illuminates her smile. 'I'm sorry I passed so early.'";
+			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] illuminates her sad smile. 'I'm sorry I passed so early.'";
 			increase life satisfaction by 1;
 		otherwise if player consents:
-			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] casts shadows over her saddened face. 'Apologies aren't enough.'";
+			say "The [if nighttime is happening]starlight[otherwise]sunlight[end if] casts shadows over her saddened face. 'I'm... sorry. I didn't think I would turn out that way. Your dad left, then AI took over my field, and I...' her voice trails off. She looks at you. 'But these are just excuses. I wasn't a good mother. I wish I could've done better, but I didn't. I wish things were different.'[line break]";
 			Increase life dissatisfaction by 1;
-		say "She's the reason you wanted to live forever. You wanted love to be forever. She moves closer, and holds your hand.[line break]'You know what they say. Something about flowers are fleetingly beautiful; it blooms for just for a moment, but that's why it will be more beautiful than any immortal one.'"; [TODO: this is honestly awful wording]
+		say "She's the reason you wanted to live forever. You wanted love to be forever. She moves closer, and holds your hand.[line break]'But don't let me be the reason that keeps you from happiness. I am long gone.' She moves her fingers over the back of your hand.";
+		say "'I hope you can move on. I don't want to be clich[unicode 233], but I think life is like a flower: beautiful [italic type]because[roman type] it is fleeting,' she continues quietly.";
 		say "Continue holding her hand? >";
 		if player consents:
-			say "You hold on tight, as if you were still five and you were crossing the street with her. [line break]'I love you, mom. I didn't say it enough. [line break]I love you.'";
+			say "You hold on tight, as if you were still five and you were crossing the street with her. [line break]'I love you, mom. [if use analog is true]I didn't say it enough[end if]. Thank you for giving me life.'";
 		otherwise:
-			say "You know. [italic type]I know.[roman type] You look into her eyes. Your sight's blurring a little.[line break]You let go. [line break][if use analog is true]'Thank you.'[otherwise]'I forgive you.'[end if]";
+			say "You know. [italic type]I know.[roman type] You look into her eyes. Your sight's blurring a little.[line break]You let go. [line break]'[if use analog is true]Thank you[otherwise]I forgive you[end if].'";
 		say "She left last time, when you were young. The [if nighttime is happening]stars reflected through her [end if]tears rolls down her crinkled cheeks. [italic type]Breathe,[roman type] you tell yourself. With your fists clenched, eyes shut tight, head tilted up to heaven, you turn away."; [great place to play music]
 		increase life satisfaction by 1;
 		increase photo count by 1;
@@ -133,14 +135,15 @@ After examining the photo album:
 		say "You open the album to a different page.";
 		say "There's a picture of your grandpa, holding grandma up in his arms. He must have been only around 40.";
 		increase photo count by 1;
-	otherwise if photo count is 2 and player consents::
+	otherwise if photo count is 2 and player consents:
 		say "You turn to the last page.";
 		say "Your kids, rolling around the the sand. They're not even looking at the camera.";
 		increase photo count by 1;
+		now the photo album is nowhere;
+		now will to leave is true;
 	otherwise:
 		say "You close it. You've thought about them enough today.";
 		stop the action.
-
 
 Before hinting: 
 	say "The bold text are now usually your clue; it'll often be a [bold type]verb[roman type] or a [bold type]noun[roman type].";
@@ -170,7 +173,7 @@ Before looking:
 				[line break][italic type]It's old and overplayed,[roman type] you thought to yourself and get out of bed.".
 Before entering the bed:
 	say "You fall onto the bed, as it engulfs you. [line break]Ah. It's soft. You could stay here forever.";
-	if introspection counter is greater than 4:
+	if introspection counter is greater than 4 or photo count > 2:
 		say "You climb under the sheets, and tuck yourself in. You close your eyes, [run paragraph on]";
 		if happiness > 70:
 			say "and enter a peaceful slumber. You have been loved, you have loved. Death comes naturally, and it just happens to be your turn. And maybe that's okay. [run paragraph on]";
@@ -327,11 +330,11 @@ At the time when you die:
 	
 Sleeping is wanting to die. Killing yourself is wanting to die.
 Before wanting to die:
-	if introspection counter < 5:
+	if introspection counter < 5 and photo count is not 2:
 		say "You don[']t quite think it[']s time yet.";
 	otherwise:
 		say "You[']re getting rather tired. The bed must be nearby.";
-	if bed is visible and introspection counter is 5:
+	if bed is visible and introspection counter is 5 or photo count is 2:
 		say "You just want to get in bed...";
 	stop the action;
 
